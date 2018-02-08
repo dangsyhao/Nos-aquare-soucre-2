@@ -1,0 +1,6 @@
+FROM node:6.10
+
+ENV REACT_APP_ENV dev
+
+WORKDIR /opt/www
+CMD ["npm", "start"]

@@ -1,0 +1,9 @@
+FROM node:6.10
+
+ENV REACT_APP_ENV test
+
+RUN mkdir /tmp/build
+WORKDIR /opt/www
+ADD src /opt/www
+RUN cd /opt/www && ls && npm install && npm run build
+CMD ["npm", "run", "run"]

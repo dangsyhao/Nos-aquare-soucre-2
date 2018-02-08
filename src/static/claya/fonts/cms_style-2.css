@@ -1,0 +1,88 @@
+.c-content-padding {
+    padding: 40px 35px;
+}
+
+.c-img-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+}
+.c-overlay {
+    position: absolute;
+    z-index: 500;
+    background-color: #000;
+    border-radius: 100%;
+    opacity: 0.0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.5s ease-in-out;
+   -moz-transition: opacity 0.5s ease-in-out;
+   transition: opacity 0.5s ease-in-out;
+}
+.c-parent-overlay {
+    cursor: pointer;
+}
+.c-parent-overlay:hover > .c-overlay {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.c-text-founder {
+    width: 60%;
+    margin: 0 23%;
+}
+
+.c-founder-background-center {
+    background-size: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.c-background-center {
+    background-size: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.c-parrent-icon {
+    position: relative;
+}
+.c-icon {
+    position: absolute;
+    color: #32c5d2;
+    left: 48%;
+    font-size: 30px;
+}
+.c-bottom-10 {
+    bottom: 10px;
+}
+.c-bottom-30 {
+    bottom: 30px;
+}
+.for-lisa-p {
+    cursor: pointer;
+    position: relative;
+}
+.for-lisa-p a i {
+    color: #e5e5e5;
+    font-size: 25px;
+}
+.for-lisa-p:hover a i {
+    color: #ffb25b !important;
+}
+
+.c-hover-show {
+    display: none;
+}
+
+.tooltip-custom {
+    background-color: #fff;
+}
+
+.popover-content, .popover {
+    font-size: 17px !important;
+    color: #a5a5a5 !important;
+    font-family: "Museo300-Regular" !important;
+    background-color: #fff !important;
+    border-radius: 16px !important;
+    border-color: #fff !important;
+    box-shadow: 2px 2px 15px 2px #ececec !important;
+}

@@ -1,0 +1,13 @@
+{
+  "moduleId": "notasquare-cms-ui",
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-class-properties",
+    "add-module-exports"
+  ]
+}

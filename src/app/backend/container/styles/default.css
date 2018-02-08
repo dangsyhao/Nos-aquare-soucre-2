@@ -1,0 +1,41 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all');
+@import url('/public/static/metronic/assets/global/plugins/font-awesome/css/font-awesome.min.css');
+@import url('/public/static/metronic/assets/global/plugins/simple-line-icons/simple-line-icons.min.css');
+@import url('/public/static/metronic/assets/global/plugins/bootstrap/css/bootstrap.min.css');
+@import url('/public/static/metronic/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css');
+@import url('/public/static/metronic/assets/global/plugins/datatables/datatables.min.css');
+@import url('/public/static/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css');
+@import url('/public/static/metronic/assets/global/css/components.min.css');
+@import url('/public/static/metronic/assets/global/css/plugins.min.css');
+@import url('/public/static/metronic/assets/layouts/layout/css/layout.min.css');
+@import url('/public/static/metronic/assets/layouts/layout/css/themes/light.min.css');
+@import url('/public/static/metronic/assets/layouts/layout/css/custom.min.css');
+
+.page-header.navbar {
+    background-color: #000000;
+}
+.img-del {
+    position: absolute;
+    background-color: #ed6b75;
+    border-color: #ea5460;
+    padding: 0px 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.img-del:hover {
+    color: #fff;
+    background-color: #e73d4a;
+    border-color: #e31d2d;
+}
+.caption {
+    word-wrap: break-word;
+}
+
+.ace_scrollbar-h {
+  display: inline-block !important;
+}
+
+div.ecwid-minicart {
+    display: none !important;
+}

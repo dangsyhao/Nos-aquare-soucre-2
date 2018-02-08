@@ -1,0 +1,14 @@
+.page-listing-entry:hover {
+    cursor: pointer;
+    background-color: 'red' !important;
+    background-color: #fff;
+    box-shadow: 0 0 30px 0 #eee;
+    border-radius: 15px;
+}
+
+.page-listing-entry-no-link:hover {
+    background-color: 'red' !important;
+    background-color: #fff;
+    box-shadow: 0 0 30px 0 #eee;
+    border-radius: 15px;
+}
