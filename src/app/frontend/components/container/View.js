@@ -43,7 +43,7 @@ class View extends Component {
     renderMobileMenu() {
         var t = this.props.t;
         var elements = []
-        elements.push(<li><a href="/why-personalization" className="c-link">{t('page_menu_why_personalization_matter')}</a></li>)
+        elements.push(<li><a href="/notasquare" className="c-link">{t('page_menu_notasquare')}</a></li>)
         elements.push(<li><a href="/how-to-personalization" className="c-link">{t('page_menu_how_to_personalization')}</a></li>)
         elements.push(<li><a href="/about-us" className="c-link">{t('page_menu_about_us')}</a></li>)
         elements.push(<li><a href="/customer" className="c-link">{t('page_menu_our_customer')}</a></li>)
@@ -93,11 +93,9 @@ class View extends Component {
 
                                 <nav className="c-mega-menu c-mega-menu-onepage c-mega-menu-dark c-fonts-uppercase">
                                     <ul className="nav navbar-nav c-theme-nav nav-margin-left">
-                                        <li><a href="/why-personalization" className="c-link">{t('page_menu_why_personalization_matter')}</a></li>
-                                        <li><a href="/how-to-personalization" className="c-link">{t('page_menu_how_to_personalization')}</a></li>
-                                        <li><a href="/about-us" className="c-link">{t('page_menu_about_us')}</a></li>
-                                        <li><a href="/customer" className="c-link">{t('page_menu_customer')}</a></li>
-                                        <li onClick={e=>this.props.action.showHelp(e)}><a href="javascript:;" className="c-link">{t('page_menu_help')} &nbsp;<i className="fa fa-angle-down"></i></a></li>
+                                        <li><a href="/fashion-ai" className="c-link">{t('page_menu_fashion_ai')}</a></li>
+                                        <li><a href="/portfolio" className="c-link">{t('page_menu_portfolio')}</a></li>
+                                        <li><a href="/about-us" className="c-link">{t('page_menu_about_us')}</a></li>                                        
                                     </ul>
                                 </nav>
                             </div>

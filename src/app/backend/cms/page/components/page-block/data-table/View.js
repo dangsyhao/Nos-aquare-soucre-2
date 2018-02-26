@@ -47,6 +47,9 @@ class View extends LibraryDataTable.View {
                 return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_image_slider?id=" + record.id}>Edit</a>
             case 'text-image':
                 return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_text_image?id=" + record.id}>Edit</a>
+            case 'fashion-ai-cloth-detection':
+                return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_fashion_ai_cloth_detection?id=" + record.id}>Edit</a>
+
         }
         return ''
     }

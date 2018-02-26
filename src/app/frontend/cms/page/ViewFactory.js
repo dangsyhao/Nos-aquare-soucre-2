@@ -48,6 +48,9 @@ import ImageSliderStore from './components/image-slider/Store';
 import TextImageView from './components/text-image/View';
 import TextImageAction from './components/text-image/Action';
 import TextImageStore from './components/text-image/Store';
+import FashionAIClothDetectionView from './components/fashion-ai-cloth-detection/View';
+import FashionAIClothDetectionAction from './components/fashion-ai-cloth-detection/Action';
+import FashionAIClothDetectionStore from './components/fashion-ai-cloth-detection/Store';
 
 class ViewFactory {
     constructor(dispatcher) {
@@ -70,6 +73,7 @@ class ViewFactory {
             'page-listing':                 [PageListingAction, PageListingStore, PageListingView],
             'image-slider':                 [ImageSliderAction, ImageSliderStore, ImageSliderView],
             'text-image':                   [TextImageAction, TextImageStore, TextImageView],
+            'fashion-ai-cloth-detection':   [FashionAIClothDetectionAction, FashionAIClothDetectionStore, FashionAIClothDetectionView],
         }
     }
     createBlocks(blocks) {

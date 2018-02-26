@@ -28,7 +28,7 @@ class View extends Component {
                                                 </a>
                                                 <div className="clear"></div>
                                                 <div className="" style={{display: data.get('index') == i ? 'block': 'none'}}>
-                                                    <p>{li.text}</p>
+                                                    <p>{renderHTML(li.text)}</p>
                                                 </div>
                                             </div>
                                         )

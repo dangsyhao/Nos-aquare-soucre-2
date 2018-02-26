@@ -41,7 +41,7 @@ class View extends Component {
                 <div className="c-content-testimonials-13" style={_style_box}>
                     <div className="c-testimonial" style={_style_image}>
                         <div className="c-testimonial-container" style={{padding: 0, borderRadius: 0}}>
-                            <img className="box-shadow img-responsive" src={slider.image}></img>
+                            <img style={{ height: 400, width: 'auto' }} className="box-shadow img-responsive" src={slider.image}></img>
                         </div>
                     </div>
                     <div className="row" style={_style_text}>

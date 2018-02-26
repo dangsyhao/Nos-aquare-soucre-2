@@ -6,7 +6,7 @@ if (REACT_APP_ENV == 'dev')  {
         'appTitle':                         'Not A Square CMS',
         'static.url':                       '/public/static',
         'static.dir':                       __dirname + '/../static',
-        'api.endpoint':                     'http://127.0.0.1:8230',
+        'api.endpoint':                     'http://192.168.0.106:8230',
         'translation.fallback_language':    'dev',
         'translation.load_path':            '/locales/{{lng}}/{{ns}}.json'
     }
