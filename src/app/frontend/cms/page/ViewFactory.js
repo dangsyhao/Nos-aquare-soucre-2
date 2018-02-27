@@ -51,6 +51,12 @@ import TextImageStore from './components/text-image/Store';
 import FashionAIClothDetectionView from './components/fashion-ai-cloth-detection/View';
 import FashionAIClothDetectionAction from './components/fashion-ai-cloth-detection/Action';
 import FashionAIClothDetectionStore from './components/fashion-ai-cloth-detection/Store';
+import FashionAICategoryClassificationView from './components/fashion-ai-category-classification/View';
+import FashionAICategoryClassificationAction from './components/fashion-ai-category-classification/Action';
+import FashionAICategoryClassificationStore from './components/fashion-ai-category-classification/Store';
+import FashionAIPatternRecognitionView from './components/fashion-ai-pattern-recognition/View';
+import FashionAIPatternRecognitionAction from './components/fashion-ai-pattern-recognition/Action';
+import FashionAIPatternRecognitionStore from './components/fashion-ai-pattern-recognition/Store';
 
 class ViewFactory {
     constructor(dispatcher) {
@@ -74,6 +80,8 @@ class ViewFactory {
             'image-slider':                 [ImageSliderAction, ImageSliderStore, ImageSliderView],
             'text-image':                   [TextImageAction, TextImageStore, TextImageView],
             'fashion-ai-cloth-detection':   [FashionAIClothDetectionAction, FashionAIClothDetectionStore, FashionAIClothDetectionView],
+            'fashion-ai-category-classification':    [FashionAICategoryClassificationAction, FashionAICategoryClassificationStore, FashionAICategoryClassificationView],
+            'fashion-ai-pattern-recognition':        [FashionAIPatternRecognitionAction, FashionAIPatternRecognitionStore, FashionAIPatternRecognitionView],
         }
     }
     createBlocks(blocks) {

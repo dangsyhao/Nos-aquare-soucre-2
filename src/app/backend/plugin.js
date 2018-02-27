@@ -47,7 +47,10 @@ class Plugin {
         server.webpack().addBundle('backend-page-block-update-page-listing',     __dirname + '/cms/page_block/bundles/update_page_listing.js')
         server.webpack().addBundle('backend-page-block-update-image-slider',     __dirname + '/cms/page_block/bundles/update_image_slider.js')
         server.webpack().addBundle('backend-page-block-update-text-image',       __dirname + '/cms/page_block/bundles/update_text_image.js')
-        server.webpack().addBundle('backend-page-block-update-fashion-ai-cloth-detection',       __dirname + '/cms/page_block/bundles/update_fashion_ai_cloth_detection.js')
+        server.webpack().addBundle('backend-page-block-update-fashion-ai-cloth-detection',               __dirname + '/cms/page_block/bundles/update_fashion_ai_cloth_detection.js')
+        server.webpack().addBundle('backend-page-block-update-fashion-ai-category-classification',       __dirname + '/cms/page_block/bundles/update_fashion_ai_category_classification.js')
+        server.webpack().addBundle('backend-page-block-update-fashion-ai-sleeve-length-classification',  __dirname + '/cms/page_block/bundles/update_fashion_ai_sleeve_length_classification.js')
+        server.webpack().addBundle('backend-page-block-update-fashion-ai-pattern-recognition',           __dirname + '/cms/page_block/bundles/update_fashion_ai_pattern_recognition.js')
         server.express().get('/backend/page_block/create',                       server.helper().serveBundlePage('backend-page-block-create'))
         server.express().get('/backend/page_block/update_banner',                server.helper().serveBundlePage('backend-page-block-update-banner'))
         server.express().get('/backend/page_block/update_text',                  server.helper().serveBundlePage('backend-page-block-update-text'))
@@ -65,7 +68,10 @@ class Plugin {
         server.express().get('/backend/page_block/update_page_listing',          server.helper().serveBundlePage('backend-page-block-update-page-listing'))
         server.express().get('/backend/page_block/update_image_slider',          server.helper().serveBundlePage('backend-page-block-update-image-slider'))
         server.express().get('/backend/page_block/update_text_image',            server.helper().serveBundlePage('backend-page-block-update-text-image'))
-        server.express().get('/backend/page_block/update_fashion_ai_cloth_detection',         server.helper().serveBundlePage('backend-page-block-update-fashion-ai-cloth-detection'))
+        server.express().get('/backend/page_block/update_fashion_ai_cloth_detection',                 server.helper().serveBundlePage('backend-page-block-update-fashion-ai-cloth-detection'))
+        server.express().get('/backend/page_block/update_fashion_ai_category_classification',         server.helper().serveBundlePage('backend-page-block-update-fashion-ai-category-classification'))
+        server.express().get('/backend/page_block/update_fashion_ai_sleeve_length_classification',    server.helper().serveBundlePage('backend-page-block-update-fashion-ai-sleeve-length-classification'))
+        server.express().get('/backend/page_block/update_fashion_ai_pattern_recognition',             server.helper().serveBundlePage('backend-page-block-update-fashion-ai-pattern-recognition'))
 
 
         // Text Block

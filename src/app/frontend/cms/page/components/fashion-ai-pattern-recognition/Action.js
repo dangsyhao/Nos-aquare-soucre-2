@@ -2,7 +2,7 @@
 import jQuery from 'jquery';
 
 class Action {
-    constructor(dispatcher, id='landmark-upper') {
+    constructor(dispatcher, id='category-classification') {
         this.dispatcher = dispatcher;
         this.id = id;
     }
@@ -45,14 +45,14 @@ class Action {
         })
         jQuery.ajax({
             type:      'POST',
-            url:       'http://127.0.0.1:8001/landmark-upper/predict',
+            url:       'http://127.0.0.1:8003/predict',
             data:      testImage.base64,
             dataType:  'json',
             success:   function(result) {
                 if (result.status == 'success') {
                     _this.dispatcher.dispatch({
-                        type:        _this.id + '/success',
-                        landmarks:   result.landmarks
+                        type:         _this.id + '/success',
+                        patterns:     result.results
                     })
                 }
                 else {
@@ -88,14 +88,14 @@ class Action {
 
                 jQuery.ajax({
                     type:      'POST',
-                    url:       'http://127.0.0.1:8001/landmark-upper/predict',
+                    url:       'http://127.0.0.1:8003/predict',
                     data:      imageBase64,
                     dataType:  'json',
                     success:   function(result) {
                         if (result.status == 'success') {
                             _this.dispatcher.dispatch({
-                                type:        _this.id + '/success',
-                                landmarks:   result.landmarks
+                                type:         _this.id + '/success',
+                                patterns:   result.results
                             })
                         }
                         else {
