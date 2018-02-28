@@ -35,9 +35,10 @@ class Store extends ReduceStore {
                 state = state.set('paddingTop', action.parameters.paddingTop)
                 state = state.set('offset', action.parameters.offset)
                 state = state.set('span', action.parameters.span)
-                return state            
+                return state
             case this.id + '/change-file':
                 state = state.set('isBlocking', true);
+                state = state.set('error', '');
                 state = state.set('imageBase64', action.imageBase64)
                 return state
             case this.id + '/success':

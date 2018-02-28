@@ -57,6 +57,10 @@ import FashionAICategoryClassificationStore from './components/fashion-ai-catego
 import FashionAIPatternRecognitionView from './components/fashion-ai-pattern-recognition/View';
 import FashionAIPatternRecognitionAction from './components/fashion-ai-pattern-recognition/Action';
 import FashionAIPatternRecognitionStore from './components/fashion-ai-pattern-recognition/Store';
+import FashionAISleeveLengthClassificationView from './components/fashion-ai-sleeve-length-classification/View';
+import FashionAISleeveLengthClassificationAction from './components/fashion-ai-sleeve-length-classification/Action';
+import FashionAISleeveLengthClassificationStore from './components/fashion-ai-sleeve-length-classification/Store';
+
 
 class ViewFactory {
     constructor(dispatcher) {
@@ -79,9 +83,10 @@ class ViewFactory {
             'page-listing':                 [PageListingAction, PageListingStore, PageListingView],
             'image-slider':                 [ImageSliderAction, ImageSliderStore, ImageSliderView],
             'text-image':                   [TextImageAction, TextImageStore, TextImageView],
-            'fashion-ai-cloth-detection':   [FashionAIClothDetectionAction, FashionAIClothDetectionStore, FashionAIClothDetectionView],
-            'fashion-ai-category-classification':    [FashionAICategoryClassificationAction, FashionAICategoryClassificationStore, FashionAICategoryClassificationView],
-            'fashion-ai-pattern-recognition':        [FashionAIPatternRecognitionAction, FashionAIPatternRecognitionStore, FashionAIPatternRecognitionView],
+            'fashion-ai-cloth-detection':                   [FashionAIClothDetectionAction, FashionAIClothDetectionStore, FashionAIClothDetectionView],
+            'fashion-ai-category-classification':           [FashionAICategoryClassificationAction, FashionAICategoryClassificationStore, FashionAICategoryClassificationView],
+            'fashion-ai-pattern-recognition':               [FashionAIPatternRecognitionAction, FashionAIPatternRecognitionStore, FashionAIPatternRecognitionView],
+            'fashion-ai-sleeve-length-classification':      [FashionAISleeveLengthClassificationAction, FashionAISleeveLengthClassificationStore, FashionAISleeveLengthClassificationView],
         }
     }
     createBlocks(blocks) {

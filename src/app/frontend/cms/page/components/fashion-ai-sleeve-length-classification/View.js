@@ -5,8 +5,8 @@ import 'react-block-ui/style.css';
 class View extends Component {
     render() {
         var _this = this;
-        var patterns = _this.props.data.get('patterns');
-        console.log(patterns.toJS())
+        var groups = _this.props.data.get('groups');
+
         var style = {}
         var data = this.props.data
         style.background = data.get('background')
@@ -61,24 +61,22 @@ class View extends Component {
                                     <table className="table table-condensed table-bordered" style={{ width: '85%', marginLeft: 'auto', marginRight: 'auto'}}>
                                         <tbody>
                                             <tr>
-                                                <td width="20%">Plaid</td>
-                                                <td width="10%" style={{ textAlign: 'right'}}>{patterns.get('plaid').toFixed(2)}</td>
-                                                <td><div style={{ width: (patterns.get('plaid')*100) + "%", height: 20, backgroundColor: '#FF0000' }}></div></td>
+                                                <td width="20%">Sleeveless</td>
+                                                <td width="10%" style={{ textAlign: 'right'}}>{groups.get('sleeveless').toFixed(2)}</td>
+                                                <td><div style={{ width: (groups.get('sleeveless')*100) + "%", height: 20, backgroundColor: '#FF0000' }}></div></td>
                                             </tr>
                                             <tr>
-                                                <td width="20%">Polka Dots</td>
-                                                <td width="10%" style={{ textAlign: 'right'}}>{patterns.get('polka_dots').toFixed(2)}</td>
-                                                <td><div style={{ width: (patterns.get('polka_dots')*100) + "%", height: 20, backgroundColor: '#FF0000' }}></div></td>
+                                                <td width="20%">Normal sleeve</td>
+                                                <td width="10%" style={{ textAlign: 'right'}}>{groups.get('normal').toFixed(2)}</td>
+                                                <td><div style={{ width: (groups.get('normal')*100) + "%", height: 20, backgroundColor: '#FF0000' }}></div></td>
                                             </tr>
                                             <tr>
-                                                <td width="20%">Stripe</td>
-                                                <td width="10%" style={{ textAlign: 'right'}}>{patterns.get('stripe').toFixed(2)}</td>
-                                                <td><div style={{ width: (patterns.get('stripe')*100) + "%", height: 20, backgroundColor: '#FF0000' }}></div></td>
+                                                <td width="20%">Long sleeve</td>
+                                                <td width="10%" style={{ textAlign: 'right'}}>{groups.get('long').toFixed(2)}</td>
+                                                <td><div style={{ width: (groups.get('long')*100) + "%", height: 20, backgroundColor: '#FF0000' }}></div></td>
                                             </tr>
                                         </tbody>
                                     </table>
-
-                                    <p className="text-center">* More patterns are coming soon..</p>
                                 </div>
                             </div>
                         </div>

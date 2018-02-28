@@ -23,7 +23,6 @@ class View extends Component {
                                                 <a href="javascript:;" onClick={()=>_this.props.action.scrollBox(i)}>
                                                     <div className="">
                                                         <h3 className={data.get('index') == i ? "c-font-20 c-font-bold": "c-font-20"} style={{float: 'left'}}>{li.title}</h3>
-                                                        <i className={data.get('index') == i ? "icon-arrow-up c-font-25 c-theme-font": "icon-arrow-down c-font-25 c-theme-font"} style={{float: 'right'}}></i>
                                                     </div>
                                                 </a>
                                                 <div className="clear"></div>

@@ -1,11 +1,11 @@
 input.i-questionnaire:focus {
     outline-style: none !important;
   }
-  
+
   .c-cart-show {
     display: block !important;
   }
-  
+
   .c-menu-mobile-margin{
       margin-top: 8px
   }
@@ -18,20 +18,20 @@ input.i-questionnaire:focus {
   .c-layout-header.c-layout-header-2 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-btn-icon, .c-page-on-scroll .c-layout-header.c-layout-header-2 .c-navbar .c-mega-menu > .nav.navbar-nav > li > .c-link {
       color:#fff;
   }
-  
+
   .tooltip.top .tooltip-arrow {
       border-top-color: #fff;
   }
-  
+
   .tooltip-point .tooltip{
     top: -26px;
     opacity: 1;
   }
-  
+
   .spec .tooltip{
     top: 8px !important;
   }
-  
+
   .tooltip-point .tooltip .tooltip-arrow{
     border-left-color: #fff;
   }
@@ -68,7 +68,7 @@ input.i-questionnaire:focus {
   .carousel .control-prev.control-arrow:before {
       border-right: 8px solid #333;
   }
-  
+
   #carousel .slide {
     opacity: 0.5
   }
@@ -92,11 +92,11 @@ input.i-questionnaire:focus {
   #image-slider .carousel .slider-wrapper {
     padding: 0 12%;
   }
-  
+
   input::placeholder {
       color: #ECECEC;
   }
-  
+
   div.ecwid-minicart-link {
       display: none;
   }
@@ -129,7 +129,7 @@ input.i-questionnaire:focus {
   .ecwid-productBrowser-CheckoutPaymentDetailsPage .ecwid-btn.ecwid-btn--secondary.ecwid-btn--sign_in {
       display: none !important;
   }
-  
+
   .cy-btn-white {
       color: #FFFFFF;
   }
@@ -138,7 +138,7 @@ input.i-questionnaire:focus {
       border: 1px solid #FFFFFF;
       color: #FFFFFF;
   }
-  
+
   .c-menu-mobile-margin > a {
       color: #a6a6a6 !important;
   }
@@ -150,17 +150,17 @@ input.i-questionnaire:focus {
   .c-btn-icon {
       color: #FFFFFF !important;
       font-weight: 600 !important;
-  
+
       font-size: 16px !important;
   }
-  
+
   .c-page-on-scroll .c-link {
-      color: #3498DB !important;
+      color: #000000 !important;
   }
   .c-page-on-scroll .c-btn-icon {
-      color: #3498DB !important;
+      color: #000000 !important;
   }
-  
+
   .c-desktop-logo {
       display: block;
   }
@@ -173,39 +173,39 @@ input.i-questionnaire:focus {
   .c-page-on-scroll .c-desktop-logo-inverse {
       display: block;
   }
-  
+
   /* Extra nav bar */
   .extra-nav-bar .c-link:hover {
-      color: #a6a6a6 !important;
+      color: #000000 !important;
       font-family: 'gilroy-light';
       font-size: 20px;
   }
   .extra-nav-bar .c-link:hover > i {
-      color: #a6a6a6 !important;
+      color: #FF0000 !important;
   }
   .extra-nav-bar .c-link {
       color: #FFFFFF !important;
       font-family: 'gilroy-light';
       font-size: 20px;
   }
-  
+
   .c-page-on-scroll .extra-nav-bar {
       background-color: #FFFFFFEE !important;
   }
   .c-page-on-scroll .extra-nav-bar .c-link:hover {
-      color: #a6a6a6 !important;
+      color: #FF0000 !important;
       font-family: 'gilroy-light';
       font-size: 20px;
   }
   .c-page-on-scroll .extra-nav-bar .c-link:hover > i {
-      color: #a6a6a6 !important;
+      color: #FF0000 !important;
   }
   .c-page-on-scroll .extra-nav-bar .c-link {
-      color: #3498DB !important;
+      color: #000000 !important;
       font-family: 'gilroy-light';
       font-size: 20px;
   }
-  
+
   /* Footer style */
   .claya-footer .f-link {
       color: #FFFFFF !important;
@@ -219,7 +219,7 @@ input.i-questionnaire:focus {
       font-weight: 600;
       font-size: 20px;
   }
-  
+
   @media (min-width: 991px) {
       .c-mega-menu.c-mega-menu-dark-mobile {
           display: none !important;
@@ -243,7 +243,7 @@ input.i-questionnaire:focus {
           display: none !important;
       }
       .cy-btn-white:hover {
-        background: #3498DB;
+        background: #FF0000;
         color: #fff;
       }
       .cy-btn-white:hover small,.cy-btn-white:hover h3 {
@@ -270,17 +270,17 @@ input.i-questionnaire:focus {
           padding: 0;
       }
       .c-link {
-          color: #3498DB !important;
+          color: #000000 !important;
           font-weight: 600 !important;
           font-size: 16px !important;
       }
       .c-btn-icon {
-          color: #3498DB !important;
+          color: #FF0000 !important;
           font-weight: 600 !important;
-  
+
           font-size: 16px !important;
       }
-  
+
       .claya-banner {
           text-align: center;
       }
@@ -317,7 +317,7 @@ input.i-questionnaire:focus {
       .claya-made-for-lisa-mobile {
           display: block !important;
       }
-  
+
       .center-on-mobile {
           text-align: center;
       }
@@ -325,7 +325,7 @@ input.i-questionnaire:focus {
           display: none;
       }
   }
-  
+
   .cy-banner-container-2 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -335,7 +335,7 @@ input.i-questionnaire:focus {
     width: 100%;
     left: 0px;
   }
-  
+
   .cy-banner-container-500 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -345,14 +345,14 @@ input.i-questionnaire:focus {
     width: 100%;
     left: 0px;
   }
-  
-  
+
+
   .vcenter {
     display: inline-block;
     vertical-align: middle;
     float: none;
   }
-  
+
   .c-cart-menu:hover {
     cursor: default;
   }

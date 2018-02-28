@@ -4,7 +4,7 @@ import {ReduceStore} from 'flux/utils';
 import Constants from './Constants';
 
 class Store extends ReduceStore {
-    constructor(dispatcher, id = 'landmark-upper') {
+    constructor(dispatcher, id = 'sleeve-length-classification') {
         super(dispatcher)
         this.dispatcher = dispatcher
         this.id = id
@@ -21,10 +21,10 @@ class Store extends ReduceStore {
             'isBlocking':       false,
             'imageBase64':      '',
             'error':            '',
-            'patterns':         Immutable.Map({
-                'plaid':         0,
-                'polka_dots':    0,
-                'stripe':        0,
+            'groups':           Immutable.Map({
+                'sleeveless':     0,
+                'normal':         0,
+                'long':           0,
             }),
             'testImages':       Immutable.List([
             ])
@@ -47,7 +47,7 @@ class Store extends ReduceStore {
                 return state
             case this.id + '/success':
                 state = state.set('isBlocking', false);
-                state = state.set('patterns', Immutable.Map(action.patterns))
+                state = state.set('groups', Immutable.Map(action.groups))
                 return state
             case this.id + '/failed':
                 state = state.set('isBlocking', false);

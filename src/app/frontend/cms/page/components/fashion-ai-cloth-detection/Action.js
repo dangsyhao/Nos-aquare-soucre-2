@@ -29,13 +29,13 @@ class Action {
             type: this.id + '/load',
             parameters: parameters
         })
-        this.loadTestURL("/public/static/tests/test_image1.jpeg");
-        this.loadTestURL("/public/static/tests/test_image2.jpeg");
-        this.loadTestURL("/public/static/tests/test_image3.jpg");
-        this.loadTestURL("/public/static/tests/test_image4.jpeg");
-        this.loadTestURL("/public/static/tests/test_image5.jpg");
-        this.loadTestURL("/public/static/tests/test_image6.jpg");
-        this.loadTestURL("/public/static/tests/test_image7.jpeg");
+        this.loadTestURL("/public/static/tests/landmark/test1.jpeg");
+        this.loadTestURL("/public/static/tests/landmark/test2.jpeg");
+        this.loadTestURL("/public/static/tests/landmark/test3.jpg");
+        this.loadTestURL("/public/static/tests/landmark/test4.jpeg");
+        this.loadTestURL("/public/static/tests/landmark/test5.jpg");
+        this.loadTestURL("/public/static/tests/landmark/test6.jpg");
+        this.loadTestURL("/public/static/tests/landmark/test7.jpeg");
     }
     submitTestImage(testImage) {
         var _this = this;
@@ -45,7 +45,7 @@ class Action {
         })
         jQuery.ajax({
             type:      'POST',
-            url:       'http://127.0.0.1:8001/landmark-upper/predict',
+            url:       __params.config['fsai-api.landmark-detection'] + '/predict',
             data:      testImage.base64,
             dataType:  'json',
             success:   function(result) {
@@ -88,7 +88,7 @@ class Action {
 
                 jQuery.ajax({
                     type:      'POST',
-                    url:       'http://127.0.0.1:8001/landmark-upper/predict',
+                    url:       __params.config['fsai-api.landmark-detection'] + '/predict',
                     data:      imageBase64,
                     dataType:  'json',
                     success:   function(result) {

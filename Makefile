@@ -14,3 +14,8 @@ run:
 		-p $(NOT_A_SQUARE_CMS_UI_HOST_PORT):3000 \
 		notasquare/cms-ui/dev \
 		npm run dev
+
+release:
+	sudo docker build --no-cache -f docker/Dockerfile-prod -t notasquare/cms-ui/prod .
+	sudo docker tag notasquare/cms-ui/prod $(REGISTRY)/notasquare/cms-ui/prod
+	sudo docker push $(REGISTRY)/notasquare/cms-ui/prod

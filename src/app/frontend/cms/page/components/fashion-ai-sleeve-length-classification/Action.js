@@ -2,7 +2,7 @@
 import jQuery from 'jquery';
 
 class Action {
-    constructor(dispatcher, id='category-classification') {
+    constructor(dispatcher, id='sleeve-length-classification') {
         this.dispatcher = dispatcher;
         this.id = id;
     }
@@ -29,15 +29,14 @@ class Action {
             type: this.id + '/load',
             parameters: parameters
         })
-        this.loadTestURL("/public/static/tests/pattern/test1.jpg");
-        this.loadTestURL("/public/static/tests/pattern/test2.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test3.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test4.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test5.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test6.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test7.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test8.jpeg");
-        this.loadTestURL("/public/static/tests/pattern/test9.jpg");
+        this.loadTestURL("/public/static/tests/sleeve/test1.jpeg");
+        this.loadTestURL("/public/static/tests/sleeve/test2.jpg");
+        this.loadTestURL("/public/static/tests/sleeve/test3.jpeg");
+        this.loadTestURL("/public/static/tests/sleeve/test4.jpeg");
+        this.loadTestURL("/public/static/tests/sleeve/test5.jpeg");
+        this.loadTestURL("/public/static/tests/sleeve/test6.jpeg");
+        this.loadTestURL("/public/static/tests/sleeve/test7.jpeg");
+        this.loadTestURL("/public/static/tests/sleeve/test8.jpeg");
     }
     submitTestImage(testImage) {
         var _this = this;
@@ -47,14 +46,14 @@ class Action {
         })
         jQuery.ajax({
             type:      'POST',
-            url:       __params.config['fsai-api.pattern-recognition'] + '/predict',
+            url:       __params.config['fsai-api.sleeve-length-classification'] + '/predict',
             data:      testImage.base64,
             dataType:  'json',
             success:   function(result) {
                 if (result.status == 'success') {
                     _this.dispatcher.dispatch({
                         type:         _this.id + '/success',
-                        patterns:     result.results
+                        groups:       result.result
                     })
                 }
                 else {
@@ -90,14 +89,14 @@ class Action {
 
                 jQuery.ajax({
                     type:      'POST',
-                    url:       __params.config['fsai-api.pattern-recognition'] + '/predict',
+                    url:       __params.config['fsai-api.sleeve-length-classification'] + '/predict',
                     data:      imageBase64,
                     dataType:  'json',
                     success:   function(result) {
                         if (result.status == 'success') {
                             _this.dispatcher.dispatch({
                                 type:         _this.id + '/success',
-                                patterns:   result.results
+                                groups:       result.result
                             })
                         }
                         else {

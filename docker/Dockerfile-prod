@@ -1,6 +1,6 @@
 FROM node:6.10
 
-ENV REACT_APP_ENV test
+ENV REACT_APP_ENV prod
 
 RUN mkdir /tmp/build
 WORKDIR /opt/www

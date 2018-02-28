@@ -43,10 +43,9 @@ class View extends Component {
     renderMobileMenu() {
         var t = this.props.t;
         var elements = []
-        elements.push(<li><a href="/notasquare" className="c-link">{t('page_menu_notasquare')}</a></li>)
-        elements.push(<li><a href="/how-to-personalization" className="c-link">{t('page_menu_how_to_personalization')}</a></li>)
-        elements.push(<li><a href="/about-us" className="c-link">{t('page_menu_about_us')}</a></li>)
-        elements.push(<li><a href="/customer" className="c-link">{t('page_menu_our_customer')}</a></li>)
+        elements.push(<li><a href="/fashion-ai" className="c-link">{t('page_menu_fashion_ai')}</a></li>)
+        elements.push(<li><a href="/portfolio" className="c-link">{t('page_menu_portfolio')}</a></li>)
+        elements.push(<li><a href="/team" className="c-link">{t('page_menu_team')}</a></li>)
         return elements
     }
     render() {
@@ -70,9 +69,9 @@ class View extends Component {
                             <div className="c-navbar-wrapper clearfix">
                                 <div className="c-brand c-pull-left">
                                     <a href="/" className="c-logo">
-                                        <img src="/public/static/claya/logo/logo-white.png" alt="JANGO" className="c-desktop-logo" width="120"></img>
-                                        <img src="/public/static/claya/logo/logo1.png" style={{ marginTop: -7 }} alt="JANGO" className="c-desktop-logo-inverse" width="100"></img>
-                                        <img src="/public/static/claya/logo/logo1.png" alt="JANGO" className="c-mobile-logo" width="100"></img>
+                                        <img src="/public/static/logo_white.png" style={{ marginTop: 14 }} className="c-desktop-logo" width="200"></img>
+                                        <img src="/public/static/logo.png" style={{ marginTop: 1 }} className="c-desktop-logo-inverse" width="200"></img>
+                                        <img src="/public/static/logo.png" style={{ marginTop: 1 }} className="c-mobile-logo" width="200"></img>
                                     </a>
                                     <button className="c-hor-nav-toggler" type="button" data-target=".c-mega-menu" onClick={e => this.props.action.toggleMobileMenu()}>
                                         <span className="c-line"></span>
@@ -95,7 +94,7 @@ class View extends Component {
                                     <ul className="nav navbar-nav c-theme-nav nav-margin-left">
                                         <li><a href="/fashion-ai" className="c-link">{t('page_menu_fashion_ai')}</a></li>
                                         <li><a href="/portfolio" className="c-link">{t('page_menu_portfolio')}</a></li>
-                                        <li><a href="/about-us" className="c-link">{t('page_menu_about_us')}</a></li>                                        
+                                        <li><a href="/team" className="c-link">{t('page_menu_team')}</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -115,7 +114,7 @@ class View extends Component {
                     {this.props.children}
                 </div>
 
-                <footer className="c-layout-footer c-layout-footer-6" style={{ backgroundImage: this.props.pageContainer.get('footer_background'), backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+                <footer className="c-layout-footer c-layout-footer-6" style={{ height: 400, backgroundColor: '#000000', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
                     <div className="c-prefooter" style={{ marginBottom: 0 }}>
                         <div className="container-fluid">
                             <div className="row">

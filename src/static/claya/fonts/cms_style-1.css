@@ -301,7 +301,7 @@ li.active span.icon-menu, li:hover span.icon-menu {
   padding: 0 15px;
 }
 .cy-theme-bg{
-  background-color: #43c2be;
+  background-color: #000000;
 }
 .c-layout-header-7 .c-navbar .c-mega-menu .navbar-nav.c-theme-nav li:hover > .c-link, .c-layout-header-7 .c-navbar .c-mega-menu .navbar-nav.c-theme-nav li:active > .c-link {
   color: #6b6a6a !important; }

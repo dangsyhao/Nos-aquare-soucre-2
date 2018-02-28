@@ -48,6 +48,7 @@ class Store extends ReduceStore {
                 return state
             case this.id + '/change-file':
                 state = state.set('isBlocking', true);
+                state = state.set('error', '');
                 state = state.set('imageBase64', action.imageBase64)
                 return state
             case this.id + '/success':
