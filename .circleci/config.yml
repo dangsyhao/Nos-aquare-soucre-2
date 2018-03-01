@@ -29,7 +29,7 @@ jobs:
             pip install awscli==1.14.32
       - run:
           name: Force new deployment on AWS ECS
-          command: aws ecs update-service --region us-east-1 --cluster Testing --service cms-ui --force-new-deployment
+          command: aws ecs update-service --region us-east-1 --cluster Production --service nas-cms-ui --force-new-deployment
 workflows:
   version: 2
   prod:
