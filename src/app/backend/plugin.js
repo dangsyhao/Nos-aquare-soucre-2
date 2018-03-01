@@ -85,6 +85,17 @@ class Plugin {
         // Setting
         server.webpack().addBundle('backend-setting',                   __dirname + '/container/setting/bundles/update.js')
         server.express().get('/backend/setting',                        server.helper().serveBundlePage('backend-setting'))
+
+
+        // User
+        server.webpack().addBundle('backend-user',                      __dirname + '/cms/user/bundles/login.js')
+        server.webpack().addBundle('backend-user-list',                 __dirname + '/cms/user/bundles/list.js')
+        server.webpack().addBundle('backend-user-create',               __dirname + '/cms/user/bundles/create.js')
+        server.webpack().addBundle('backend-user-update',               __dirname + '/cms/user/bundles/update.js')
+        server.express().get('/backend/login',                          server.helper().serveBundlePage('backend-user'))
+        server.express().get('/backend/user',                           server.helper().serveBundlePage('backend-user-list'))
+        server.express().get('/backend/user/create',                    server.helper().serveBundlePage('backend-user-create'))
+        server.express().get('/backend/user/update',                    server.helper().serveBundlePage('backend-user-update'))
     }
 }
 

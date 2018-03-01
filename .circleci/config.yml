@@ -1,0 +1,48 @@
+version: 2
+jobs:
+  build_prod:
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Tag build information
+          command: |
+            echo "ENVIRONMENT=test" >> src/.build
+            echo "BUILD_TIMESTAMP=$(date +'%Y.%m.%d %H:%M:%S')" >> src/.build
+            echo "CIRCLE_BUILD_NUM=${CIRCLE_BUILD_NUM}" >> src/.build
+      - run:
+          name: Build and push Docker Image
+          command: |
+            docker build --no-cache -f docker/Dockerfile-test -t notasquare/cms-ui/prod .
+            docker tag notasquare/cms-ui/prod registry.novogenialab.com/notasquare/cms-ui/prod
+            docker push registry.novogenialab.com/notasquare/cms-ui/prod
+  deploy_prod:
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --no-cache py-pip=9.0.0-r1
+            pip install awscli==1.14.32
+      - run:
+          name: Force new deployment on AWS ECS
+          command: aws ecs update-service --region us-east-1 --cluster Testing --service cms-ui --force-new-deployment
+workflows:
+  version: 2
+  prod:
+    jobs:
+      - build_prod:
+          filters:
+            branches:
+              only:
+                - prod
+      - deploy_prod:
+          requires:
+            - build_prod
+          filters:
+            branches:
+              only:
+                - prod

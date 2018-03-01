@@ -12,6 +12,10 @@ import FormSearchView from './form-search/View';
 import FormSearchStore from './form-search/Store';
 import FormSearchAction from './form-search/Action';
 
+import UserView from 'backend-page-container/user-service/View';
+import UserStore from 'backend-page-container/user-service/Store';
+import UserAction from 'backend-page-container/user-service/Action';
+
 const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
@@ -20,12 +24,15 @@ const _dataTableAction = new DataTableAction(_dispatcher, 'data-table')
 const _formSearchStore = new FormSearchStore(_dispatcher, 'form-search')
 const _formSearchAction = new FormSearchAction(_dispatcher, 'form-search')
 
+const _userStore = new UserStore(_dispatcher, 'user-service-backend')
+const _userAction = new UserAction(_dispatcher, 'user-service-backend')
 class ListContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
             _dataTableStore,
-            _formSearchStore
+            _formSearchStore,
+            _userStore
         ];
     }
 
@@ -34,12 +41,15 @@ class ListContainer extends Component {
             pageContainer:    _pageContainerStore.getState(),
             dataTable:        _dataTableStore.getState(),
             formSearch:       _formSearchStore.getState(),
+            userState:        _userStore.getState()
         }
     }
 
     render() {
         return (
-            <PageContainerView pageContainer={this.state.pageContainer}>
+            <PageContainerView pageContainer={this.state.pageContainer}
+                    userAction={_userAction}
+                    userComponent={<UserView userdata={this.state.userState} action={_userAction}/>}>
                 <div className="portlet">
                     <div className="portlet-title">
                         <div className="caption">
