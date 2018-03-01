@@ -9,13 +9,13 @@ jobs:
       - run:
           name: Tag build information
           command: |
-            echo "ENVIRONMENT=test" >> src/.build
+            echo "ENVIRONMENT=prod" >> src/.build
             echo "BUILD_TIMESTAMP=$(date +'%Y.%m.%d %H:%M:%S')" >> src/.build
             echo "CIRCLE_BUILD_NUM=${CIRCLE_BUILD_NUM}" >> src/.build
       - run:
           name: Build and push Docker Image
           command: |
-            docker build --no-cache -f docker/Dockerfile-test -t notasquare/cms-ui/prod .
+            docker build --no-cache -f docker/Dockerfile-prod -t notasquare/cms-ui/prod .
             docker tag notasquare/cms-ui/prod registry.novogenialab.com/notasquare/cms-ui/prod
             docker push registry.novogenialab.com/notasquare/cms-ui/prod
   deploy_prod:
