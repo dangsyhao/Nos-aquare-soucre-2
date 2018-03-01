@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Container} from 'flux/utils';
 import {Dispatcher} from 'flux';
 
-import PageContainerView from 'backend-page-container/page-container/View';
-import PageContainerStore from 'backend-page-container/page-container/Store';
-import PageContainerAction from 'backend-page-container/page-container/Action';
+import PageContainerView from 'backend-page-container/View';
+import PageContainerStore from 'backend-page-container/Store';
+import PageContainerAction from 'backend-page-container/Action';
 import DataTableView from './data-table/View';
 import DataTableStore from './data-table/Store';
 import DataTableAction from './data-table/Action';

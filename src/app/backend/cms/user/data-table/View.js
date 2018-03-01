@@ -3,7 +3,6 @@ import LibraryDataTable from 'library-data-table';
 import BlockUi from 'react-block-ui';
 import 'react-block-ui/style.css';
 
-import AppHelpers from 'backend-page-container/Helpers';
 
 class View extends LibraryDataTable.View {
     renderTableHeader() {

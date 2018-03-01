@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Container} from 'flux/utils';
 import {Dispatcher} from 'flux';
 
-import PageContainerView from 'backend-page-container/page-container/View';
-import PageContainerAction from 'backend-page-container/page-container/Action';
-import PageContainerStore from 'backend-page-container/page-container/Store';
+import PageContainerView from 'backend-page-container/View';
+import PageContainerAction from 'backend-page-container/Action';
+import PageContainerStore from 'backend-page-container/Store';
 import FormView from './form-create/View';
 import FormStore from './form-create/Store';
 import FormAction from './form-create/Action';
