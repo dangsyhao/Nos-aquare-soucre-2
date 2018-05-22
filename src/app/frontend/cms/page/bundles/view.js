@@ -19,7 +19,6 @@ jQuery.ajax({
     },
     dataType: 'json',
     success:  function(result) {
-        console.log(result)
         if (result.status == 'ok') {
             ReactDOM.render(
                 React.createElement(

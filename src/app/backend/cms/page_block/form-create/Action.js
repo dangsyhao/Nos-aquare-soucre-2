@@ -35,6 +35,7 @@ class Action extends LibraryForm.Form.Action {
             {'value': 'fashion-ai-category-classification',       'label': 'Fashion AI - Category Classification'},
             {'value': 'fashion-ai-sleeve-length-classification',  'label': 'Fashion AI - Sleeve Length Classification'},
             {'value': 'fashion-ai-pattern-recognition',           'label': 'Fashion AI - Pattern Recognition'},
+            {'value': 'fashion-ai-upper',                         'label': 'Fashion AI - Upper'},
         ])
     }
 

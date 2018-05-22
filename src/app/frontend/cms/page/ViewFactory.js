@@ -60,6 +60,9 @@ import FashionAIPatternRecognitionStore from './components/fashion-ai-pattern-re
 import FashionAISleeveLengthClassificationView from './components/fashion-ai-sleeve-length-classification/View';
 import FashionAISleeveLengthClassificationAction from './components/fashion-ai-sleeve-length-classification/Action';
 import FashionAISleeveLengthClassificationStore from './components/fashion-ai-sleeve-length-classification/Store';
+import FashionAIUpperView from './components/fashion-ai-upper/View';
+import FashionAIUpperAction from './components/fashion-ai-upper/Action';
+import FashionAIUpperStore from './components/fashion-ai-upper/Store';
 
 
 class ViewFactory {
@@ -87,6 +90,7 @@ class ViewFactory {
             'fashion-ai-category-classification':           [FashionAICategoryClassificationAction, FashionAICategoryClassificationStore, FashionAICategoryClassificationView],
             'fashion-ai-pattern-recognition':               [FashionAIPatternRecognitionAction, FashionAIPatternRecognitionStore, FashionAIPatternRecognitionView],
             'fashion-ai-sleeve-length-classification':      [FashionAISleeveLengthClassificationAction, FashionAISleeveLengthClassificationStore, FashionAISleeveLengthClassificationView],
+            'fashion-ai-upper':                             [FashionAIUpperAction, FashionAIUpperStore, FashionAIUpperView],
         }
     }
     createBlocks(blocks) {

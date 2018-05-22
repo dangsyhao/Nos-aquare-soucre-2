@@ -55,6 +55,8 @@ class View extends LibraryDataTable.View {
                 return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_fashion_ai_sleeve_length_classification?id=" + record.id}>Edit</a>
             case 'fashion-ai-pattern-recognition':
                 return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_fashion_ai_pattern_recognition?id=" + record.id}>Edit</a>
+            case 'fashion-ai-upper':
+                return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_fashion_ai_upper?id=" + record.id}>Edit</a>
 
         }
         return ''

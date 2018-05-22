@@ -51,6 +51,7 @@ class Plugin {
         server.webpack().addBundle('backend-page-block-update-fashion-ai-category-classification',       __dirname + '/cms/page_block/bundles/update_fashion_ai_category_classification.js')
         server.webpack().addBundle('backend-page-block-update-fashion-ai-sleeve-length-classification',  __dirname + '/cms/page_block/bundles/update_fashion_ai_sleeve_length_classification.js')
         server.webpack().addBundle('backend-page-block-update-fashion-ai-pattern-recognition',           __dirname + '/cms/page_block/bundles/update_fashion_ai_pattern_recognition.js')
+        server.webpack().addBundle('backend-page-block-update-fashion-ai-upper',                         __dirname + '/cms/page_block/bundles/update_fashion_ai_upper.js')
         server.express().get('/backend/page_block/create',                       server.helper().serveBundlePage('backend-page-block-create'))
         server.express().get('/backend/page_block/update_banner',                server.helper().serveBundlePage('backend-page-block-update-banner'))
         server.express().get('/backend/page_block/update_text',                  server.helper().serveBundlePage('backend-page-block-update-text'))
@@ -72,6 +73,7 @@ class Plugin {
         server.express().get('/backend/page_block/update_fashion_ai_category_classification',         server.helper().serveBundlePage('backend-page-block-update-fashion-ai-category-classification'))
         server.express().get('/backend/page_block/update_fashion_ai_sleeve_length_classification',    server.helper().serveBundlePage('backend-page-block-update-fashion-ai-sleeve-length-classification'))
         server.express().get('/backend/page_block/update_fashion_ai_pattern_recognition',             server.helper().serveBundlePage('backend-page-block-update-fashion-ai-pattern-recognition'))
+        server.express().get('/backend/page_block/update_fashion_ai_upper',                           server.helper().serveBundlePage('backend-page-block-update-fashion-ai-upper'))
 
 
         // Text Block

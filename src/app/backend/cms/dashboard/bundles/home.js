@@ -6,9 +6,14 @@ import HomeContainer from './../HomeContainer'
 
 import 'backend-page-container/styles/default.css'
 
-jQuery(document).ready(function() {
-    ReactDOM.render(
-        <HomeContainer />,
-        document.getElementById('root')
-    )
-});
+if (loggedIn()) {
+    jQuery(document).ready(function() {
+        ReactDOM.render(
+            <HomeContainer />,
+            document.getElementById('root')
+        )
+    });
+}
+else {
+    window.location = '';
+}
