@@ -8,6 +8,7 @@ build:
 npm-install:
 	cd $(NOT_A_SQUARE_CMS_UI_HOME)/src/ && npm install
 
+
 run:
 	sudo docker run -it \
 		-v $(NOT_A_SQUARE_CMS_UI_HOME)/src/:/opt/www/ \

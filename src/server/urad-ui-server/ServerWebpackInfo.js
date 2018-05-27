@@ -1,3 +1,6 @@
+const webpack = require('webpack');
+const path = require('path');
+
 
 class ServerWebpackInfo {
     constructor(server) {
@@ -48,7 +51,9 @@ class ServerWebpackInfo {
                 extensions: ['.js', '.json']
             },
 
-            plugins: []
+            plugins: [
+
+            ]
         }
     }
 

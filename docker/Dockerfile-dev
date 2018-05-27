@@ -3,4 +3,6 @@ FROM node:6.10
 ENV REACT_APP_ENV dev
 
 WORKDIR /opt/www
+ENV NODE_OPTIONS --max-old-space-size=4096
+
 CMD ["npm", "start"]
