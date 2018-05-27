@@ -26,6 +26,8 @@ class ServerHelper {
                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
                         <meta content="width=device-width, initial-scale=1" name="viewport" />
                         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+                        <script type="text/javascript" src="/public/static/pace.js" charset="utf-8"></script>
+                        <link rel="stylesheet" href="/public/static/loading-bar.css">
                         <link rel="stylesheet" href="/public/static/preloading.css">
                         <script type="text/javascript">
                             var __params = ` + JSON.stringify(params) + `;
@@ -39,7 +41,6 @@ class ServerHelper {
                                     <div class="text">LOADING..</div>
                                 </div>
                             </div>
-
                         </div>
                         <script type="text/javascript" src="/public/build/` + bundleId + `-bundle.js" charset="utf-8"></script>
                     </body>
