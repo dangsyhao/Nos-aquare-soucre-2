@@ -7,7 +7,7 @@ import Constants from './Constants';
 class View extends Component {
     render() {
         return (
-            <BlockUi tag="div" blocking={!this.props.dataTable.get('isReady')}>
+            <BlockUi tag="div" blocking={!this.props.dataTable.get('isReady')} className="table">
                 <div>
                     { this.renderMessages() }
                 </div>
@@ -55,7 +55,7 @@ class View extends Component {
 
     renderTable() {
         return (
-            <table className="table table-striped table-bordered table-hover">
+            <table className="table table-hover">
                 { this.renderTableHeader() }
                 { this.renderTableBody() }
             </table>
@@ -78,15 +78,17 @@ class View extends Component {
         var pageIndexTo = Math.min(currentPage * recordPerPage, totalRecords);
 
         return (
-            <ul className="pagination" style={{ visibility: 'visible' }}>
-                <li className="prev"><a onClick={e => this.props.action.changePage(this.props, 1)} title="First"><span aria-hidden="true">&laquo;</span></a></li>
-                { currentPage-2 > 0 ? <li><a onClick={ e => this.props.action.changePage(this.props, currentPage-2)}>{currentPage-2}</a></li> : '' }
-                { currentPage-1 > 0 ? <li><a onClick={ e => this.props.action.changePage(this.props, currentPage-1)}>{currentPage-1}</a></li> : '' }
-                <li className="active"><a onClick={ e => this.props.action.changePage(this.props, currentPage)}>{currentPage}</a></li>
-                { currentPage+1 <= totalPage ? <li><a onClick={ e => this.props.action.changePage(this.props, currentPage+1)}>{currentPage+1}</a></li> : '' }
-                { currentPage+2 <= totalPage ? <li><a onClick={ e => this.props.action.changePage(this.props, currentPage+2)}>{currentPage+2}</a></li> : '' }
-                <li className="next"><a onClick={e => this.props.action.changePage(this.props, totalPage)} title="Last"><span aria-hidden="true">&raquo;</span></a></li>
-            </ul>
+            <div className="dataTables_wrapper">
+                <div className="dataTables_paginate" style={{ visibility: 'visible', float: 'none' }}>
+                    <a href="javascript:;" className="paginate_button previous" onClick={e => this.props.action.changePage(this.props, 1)} title="First"><span aria-hidden="true">&laquo;</span></a>
+                    { currentPage-2 > 0 ? <a href="javascript:;" className="paginate_button" onClick={ e => this.props.action.changePage(this.props, currentPage-2)}>{currentPage-2}</a> : '' }
+                    { currentPage-1 > 0 ? <a href="javascript:;" className="paginate_button" onClick={ e => this.props.action.changePage(this.props, currentPage-1)}>{currentPage-1}</a> : '' }
+                    <a href="javascript:;" className="paginate_button current" onClick={ e => this.props.action.changePage(this.props, currentPage)}>{currentPage}</a>
+                    { currentPage+1 <= totalPage ? <a href="javascript:;" className="paginate_button" onClick={ e => this.props.action.changePage(this.props, currentPage+1)}>{currentPage+1}</a> : '' }
+                    { currentPage+2 <= totalPage ? <a href="javascript:;" className="paginate_button" onClick={ e => this.props.action.changePage(this.props, currentPage+2)}>{currentPage+2}</a> : '' }
+                    <a href="javascript:;" className="paginate_button next" onClick={e => this.props.action.changePage(this.props, totalPage)} title="Last"><span aria-hidden="true">&raquo;</span></a>
+                </div>
+            </div>
         )
     }
 

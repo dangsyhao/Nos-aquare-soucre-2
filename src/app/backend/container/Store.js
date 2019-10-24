@@ -12,6 +12,7 @@ class Store extends ReduceStore {
         return Immutable.Map({
             'applicationTitle': 'Not A Square CMS Admin',
             'userName':         'Anonymous',
+            'selectedMenuId':   'dashboard',
             'menu':             Immutable.List([
                 {
                     'name':    '',
@@ -27,6 +28,11 @@ class Store extends ReduceStore {
     }
 
     reduce(state, action) {
+        switch (action.type) {
+            case this.id + '/set-selected-menu':
+                state = state.set('selectedMenuId', action.menuId)
+                return state
+        }
         return state;
     }
 }

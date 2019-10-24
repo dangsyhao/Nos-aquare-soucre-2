@@ -12,7 +12,6 @@ class View extends LibraryForm.Form.View {
             <BlockUi tag="div" blocking={this.props.form.get('isBlocked')}>
                 <form className="login-form well" onSubmit={e => e.preventDefault()} style={{backgroundColor:'#fff'}}>
                     <div>
-                        <h3 className="title-header">Login here</h3>
                         <div className="form-group">
                             <label className="control-label">Username</label>
                             <LibraryForm.Common.Textbox.View
@@ -28,7 +27,6 @@ class View extends LibraryForm.Form.View {
                             />
                         </div>
                     </div>
-
                     <div>
                         {
                             this.props.form.get('messages').map(function(message, i) {
@@ -41,8 +39,9 @@ class View extends LibraryForm.Form.View {
                         }
                     </div>
                     <div className="form-group">
-                        <a className="btn btn-primary" onClick={ e => this.props.action.submit(this.props.form, e, this.props)}>Login</a>
-
+                        <a href="javascript:;" className="btn btn-xs btn-primary" onClick={ e => this.props.action.submit(this.props.form, e, this.props)}>
+                            <b>Login</b>
+                        </a>
                     </div>
                 </form>
             </BlockUi>

@@ -1,41 +1,228 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all');
-@import url('/public/static/metronic/assets/global/plugins/font-awesome/css/font-awesome.min.css');
-@import url('/public/static/metronic/assets/global/plugins/simple-line-icons/simple-line-icons.min.css');
-@import url('/public/static/metronic/assets/global/plugins/bootstrap/css/bootstrap.min.css');
-@import url('/public/static/metronic/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css');
-@import url('/public/static/metronic/assets/global/plugins/datatables/datatables.min.css');
-@import url('/public/static/metronic/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css');
-@import url('/public/static/metronic/assets/global/css/components.min.css');
-@import url('/public/static/metronic/assets/global/css/plugins.min.css');
-@import url('/public/static/metronic/assets/layouts/layout/css/layout.min.css');
-@import url('/public/static/metronic/assets/layouts/layout/css/themes/light.min.css');
-@import url('/public/static/metronic/assets/layouts/layout/css/custom.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/dashforge-1.0.0/lib/@fortawesome/fontawesome-free/css/all.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/dashforge-1.0.0/lib/ionicons/css/ionicons.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/dashforge-1.0.0/assets/css/dashforge.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/dashforge-1.0.0/assets/css/dashforge.dashboard.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/dashforge-1.0.0/assets/css/dashforge.mail.css');
 
-.page-header.navbar {
-    background-color: #000000;
+body {
+    background: #FFFFFF !important;
+    color: #1e1e2d;
 }
-.img-del {
-    position: absolute;
-    background-color: #ed6b75;
-    border-color: #ea5460;
-    padding: 0px 5px;
-    color: #ffffff;
-    cursor: pointer;
+.card {
+    border-radius: 0 !important;
+}
+.navbar-menu .nav-link {
+    color: #FFFFFF;
+}
+.navbar-menu .nav-item.active .nav-link {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.nav-sidebar .nav-link {
+    border-radius: 0px;
+    padding: 2px 10px 2px 15px !important;
+}
+.navbar-menu .nav-link:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.table td {
+    border-top: none;
+}
+.table thead, .table tbody {
+    border-bottom: 1px solid rgba(72, 94, 144, 0.16);
+    border-left: 1px solid rgba(72, 94, 144, 0.16);
+    border-right: 1px solid rgba(72, 94, 144, 0.16);
+}
+.table thead {
+    background: #F7F7F7;
 }
 
-.img-del:hover {
+.modal-backdrop.fade {
+    opacity: 0.5;
+}
+.modal {
+    top: 50px;
+}
+.modal-dialog-form{
+    max-width: 80% !important;
+}
+.modal-header {
+    display: block;
+}
+.modal.fade .modal-dialog {
+    transform: none;
+}
+
+
+.carousel .slide {
+    background: #FFF;
+}
+
+.badge {
+    font-size: 11px;
+}
+.btn {
+    border-radius: 0;
+}
+.alert.alert-danger {
+    background: #ee0000;
+    border: 1px solid #ee0000;
+    color: #eef;
+}
+.btn-danger {
+    background: #ee0000;
+    border: 1px solid #ee0000;
     color: #fff;
-    background-color: #e73d4a;
-    border-color: #e31d2d;
 }
-.caption {
-    word-wrap: break-word;
-}
-
-.ace_scrollbar-h {
-  display: inline-block !important;
+.btn-danger:hover {
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    color: #fff;
 }
 
-div.ecwid-minicart {
-    display: none !important;
+.form-control {
+    border-radius: 0;
+    border: 1px solid #DDD;
+}
+
+.kt-nav__link.active {
+    font-weight: 500;
+    color: #0168fa !important;
+}
+
+/* File Wrapper */
+.file-wrapper{
+  width: 250px;
+  height: 185px;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+.file-wrapper:hover .file-wrapper-overlay {
+  opacity: 0.5;
+  transition: transform 0.2s, opacity 0.5s;
+}
+.file-wrapper-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  padding: 10px;
+}
+.file-wrapper-overlay .file-name{
+  text-align: center;
+  color: #fff;
+  padding-top: 15px;
+  height: 80%;
+}
+.file-wrapper-overlay .action{
+  bottom: 15px;
+  position: absolute;
+  right: 15px;
+  color: #fff;
+}
+.file-wrapper .file-responsive{
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 24%;
+  background: #f2f2f2;
+}
+.file-wrapper .file-responsive{
+  font-size: 26px;
+  color: #c5c5c5;
+}
+.file-wrapper img{
+  margin: 0 auto;
+}
+
+/* Board Status */
+.progress-style{ background-color: #ffff99 !important; color: #1e1e2d !important; }
+.completed-style{ background-color: #ccffcc !important; color: #1e1e2d !important; }
+.open-style{ background-color: #FFFFFF  !important; color: #1e1e2d !important; }
+.blocked-style{ background-color: #ffcccc  !important; color: #1e1e2d !important; }
+.failed-style{ background-color: #FF0000 !important; color: #FFFFFF !important; }
+.failed-style span{ color: #FFFFFF !important; }
+.deprecated-style{background-color: #F3F3F3 !important; color: #FFFFFF !important;  text-decoration: line-through !important}
+
+/* Avatar */
+.avatar {
+  border-radius: 50% !important;
+}
+
+.avatar-circle {
+  background-color: #d6dadc;
+  border-radius: 50% !important;
+  color: #444;
+  cursor: pointer;
+  display: block;
+  overflow: visible;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+}
+
+.avatar-circle-o {
+  background-color: #d6dadc;
+  border: 2px solid #337ab7;
+  border-radius: 50% !important;
+  color: #444;
+  cursor: pointer;
+  display: block;
+  overflow: visible;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  font-weight: bold;
+  float: left;
+  margin-right: 5px;
+  line-height: 22px !important;
+}
+.avatar-circle span{
+  display: block;
+}
+
+.avatar-25{
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  line-height: 25px;
+}
+.avatar-25>img{
+  width: 25px;
+  /* height: 25px; */
+}
+.avatar-32{
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+.avatar-32>img{
+  width: 32px;
+  height: 32px;
+}
+
+.popover {
+
+}
+.popover.fade:not(.show) {
+    opacity: 1;
 }

@@ -1,5 +1,7 @@
 import LibraryForm from 'library-form'
 import jQuery from 'jquery'
+import UserService from 'backend-app-services/userServices'
+
 class Action extends LibraryForm.Form.Action {
     constructor(dispatcher, formId='form') {
         super(dispatcher, formId)
@@ -50,10 +52,11 @@ class Action extends LibraryForm.Form.Action {
                     if (result.status == 'ok') {
                         _this.dispatchFormAddMessage("info", "Login successfully!")
                         _this.dispatchFormSubmitSuccess(values)
-                        var user_info = result.data.info
-                        props.userAction.setUser(user_info)
-                        location.href="/backend"
-                        _this.resetForm()
+
+                        UserService.logIn(result.data.token, JSON.stringify(result.data.info))
+                        setTimeout(function() {
+                            window.location = '/backend/page';
+                        }, 500);
                     }
                     else {
                         _this.dispatchFormAddMessage("error", "Username or password invalid")

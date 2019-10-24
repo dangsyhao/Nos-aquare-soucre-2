@@ -25,22 +25,13 @@ class ServerHelper {
                         <title>` + applicationTitle + `</title>
                         <meta http-equiv="X-UA-Compatible" content="IE=edge">
                         <meta content="width=device-width, initial-scale=1" name="viewport" />
-                        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-                        <script type="text/javascript" src="/public/static/pace.js" charset="utf-8"></script>
-                        <link rel="stylesheet" href="/public/static/loading-bar.css">
-                        <link rel="stylesheet" href="/public/static/preloading.css">
+                        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"/>
                         <script type="text/javascript">
                             var __params = ` + JSON.stringify(params) + `;
                         </script>
                     </head>
-                    <body class="c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-fullscreen">
+                    <body class="page-profile">
                         <div id="root">
-                            <div class="wrap">
-                                <div class="loading">
-                                    <div class="bounceball"></div>
-                                    <div class="text">LOADING..</div>
-                                </div>
-                            </div>
                         </div>
                         <script type="text/javascript" src="/public/build/` + bundleId + `-bundle.js" charset="utf-8"></script>
                     </body>

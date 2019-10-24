@@ -50,7 +50,7 @@ class View extends LibraryForm.Form.View {
                     <div className="form-actions">
                         <div className="row">
                             <div className="col-md-offset-3 col-md-9">
-                                <a className="btn btn-primary" onClick={ e => this.props.action.submit(this.props.form, e)}>Submit</a>
+                                <a href="javascript:;" className="btn btn-xs btn-primary btn-uppercase" onClick={ e => this.props.action.submit(this.props.form, e)}>Submit</a>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@ class View extends LibraryDataTable.View {
                 <th width="5%">ID</th>
                 <th width="20%">Title</th>
                 <th width="20%">URL</th>
-                <th width="45%">Description</th>
+                <th width="40%">Description</th>
                 <th></th>
             </tr>
         </thead>
@@ -25,9 +25,9 @@ class View extends LibraryDataTable.View {
                             <td>{ record.url }</td>
                             <td>{ record.description }</td>
                             <td>
-                                <a className="btn btn-xs btn-primary" href={"/backend/page/update?id=" + record.id}>Edit</a>
-                                <a className="btn btn-xs btn-info" href={"/backend/page/view?id=" + record.id}>View</a>
-                                <a className="btn btn-xs btn-danger" onClick={e=> _this.props.action.delete(_this.props,record.id)}>Delete</a>
+                                <a href={"/backend/page/update?id=" + record.id}>Edit</a>&nbsp;|&nbsp;
+                                <a href={"/backend/page/view?id=" + record.id}>View</a>&nbsp;|&nbsp;
+                                <a href={"javascript:;"} onClick={e=> _this.props.action.delete(_this.props,record.id)}>Delete</a>
                             </td>
                         </tr>)
                     })

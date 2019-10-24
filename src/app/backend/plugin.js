@@ -14,6 +14,7 @@ class Plugin {
         })
 
         server.webpack().addAlias('backend-page-container',             __dirname + '/container')
+        server.webpack().addAlias('backend-app-services',               __dirname + '/services')
 
         // Dashboard
         server.webpack().addBundle('backend-dashboard-home',            __dirname + '/cms/dashboard/bundles/home.js')
