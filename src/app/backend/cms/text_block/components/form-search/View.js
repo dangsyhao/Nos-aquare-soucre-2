@@ -12,7 +12,7 @@ class View extends Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-md-3">
                         <div className="form-group">
                             <label>Text</label>
                             <div>

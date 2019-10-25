@@ -26,8 +26,8 @@ class View extends LibraryDataTable.View {
                             <td>{ record.username }</td>
                             <td>{ record.fullname }</td>
                             <td>
-                                <a className="btn btn-xs btn-primary" href={"/backend/user/update?id=" + record.id}>Edit</a>
-                                <a className="btn btn-xs btn-danger" onClick={e=> _this.props.action.delete(_this.props,record.id)}>Delete</a>
+                                <a href={"/backend/user/update?id=" + record.id}>Edit</a>&nbsp;|&nbsp;
+                                <a href={"javascript:;"} onClick={e=> _this.props.action.delete(_this.props,record.id)}>Delete</a>
                             </td>
                         </tr>)
                     })

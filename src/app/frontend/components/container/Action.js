@@ -23,18 +23,6 @@ class Action {
     load() {
         var _this = this;
 
-        //// GA
-        jQuery.ajax({
-            url: "https://www.google-analytics.com/analytics.js",
-            dataType: 'script',
-            success: function(response) {
-                ga('create', __params.config['ga-key'], 'auto');
-                ga('send', 'pageview');
-            },
-            async: true
-        });
-
-
         jQuery.ajax({
             type:      'GET',
             url:       __params.config['api.endpoint'] + '/setting/load',

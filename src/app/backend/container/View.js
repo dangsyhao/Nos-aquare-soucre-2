@@ -54,6 +54,7 @@ class View extends Component {
                         <li className={"nav-item " + (selectedMenuId == 'dashboard' ? 'active' : '')}><a href="/backend" className="nav-link"><span>Dashboard</span></a></li>
                         <li className={"nav-item " + (selectedMenuId == 'page' ? 'active' : '')}><a href="/backend/page" className="nav-link"><span>Page</span></a></li>
                         <li className={"nav-item " + (selectedMenuId == 'text_block' ? 'active' : '')}><a href="/backend/text_block" className="nav-link"><span>Text Block</span></a></li>
+                        <li className={"nav-item " + (selectedMenuId == 'user' ? 'active' : '')}><a href="/backend/user" className="nav-link"><span>User</span></a></li>
                         <li className={"nav-item " + (selectedMenuId == 'setting' ? 'active' : '')}><a href="/backend/setting" className="nav-link"><span>Setting</span></a></li>
                     </ul>
                 </div>

@@ -11,19 +11,29 @@ class View extends LibraryForm.Form.View {
         return (
             <BlockUi tag="div" blocking={this.props.form.get('isBlocked')}>
                 <form className="form" onSubmit={e => e.preventDefault()}>
-                    <LibraryForm.Common.Hidden.View
-                        data={this.props.form.get('fields').get('page_id')}
-                        action={this.props.action}
-                    />
-
                     <div>
                         <div className="form-group">
-                            <label className="control-label">Kind</label>
-                            <LibraryForm.Common.Select.View
-                                data={this.props.form.get('fields').get('kind')}
+                            <label className="control-label">Title <span className="required" aria-required="true">*</span></label>
+                            <LibraryForm.Common.Textbox.View
+                                data={this.props.form.get('fields').get('title')}
                                 action={this.props.action}
                             />
                         </div>
+                        <div className="form-group">
+                            <label className="control-label">URL</label>
+                            <LibraryForm.Common.Textbox.View
+                                data={this.props.form.get('fields').get('url')}
+                                action={this.props.action}
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label className="control-label">Description</label>
+                            <LibraryForm.Common.Textarea.View
+                                data={this.props.form.get('fields').get('description')}
+                                action={this.props.action}
+                            />
+                        </div>
+
                     </div>
 
                     <div>
@@ -41,7 +51,7 @@ class View extends LibraryForm.Form.View {
                     <div className="form-actions">
                         <div className="row">
                             <div className="col-md-offset-3 col-md-9">
-                                <a className="btn btn-primary" onClick={ e => this.props.action.submit(this.props.form, e)}>Submit</a>
+                                <a href="javascript:;" className="btn btn-xs btn-primary btn-uppercase" onClick={ e => this.props.action.submit(this.props.form, e)}>Save</a>
                             </div>
                         </div>
                     </div>

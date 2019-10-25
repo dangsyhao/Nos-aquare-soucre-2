@@ -24,7 +24,7 @@ class View extends LibraryForm.Form.View {
                             <LibraryForm.Common.Textarea.View
                                 data={this.props.form.get('fields').get('en')}
                                 action={this.props.action}
-                                rows={3}
+                                rows={7}
                             />
                         </div>
                     </div>
@@ -44,7 +44,7 @@ class View extends LibraryForm.Form.View {
                     <div className="form-actions">
                         <div className="row">
                             <div className="col-md-offset-3 col-md-9">
-                                <a className="btn btn-primary" onClick={ e => this.props.action.submit(this.props.form, e)}>Submit</a>
+                                <a href="javascript:;" className="btn btn-xs btn-primary btn-uppercase" onClick={ e => this.props.action.submit(this.props.form, e)}>Save</a>
                             </div>
                         </div>
                     </div>

@@ -20,6 +20,7 @@ class Store extends ReduceStore {
                         { 'name':  'Dashboard',           'url': '/backend'},
                         { 'name':  'Page',                'url': '/backend/page'},
                         { 'name':  'Text Block',          'url': '/backend/text_block'},
+                        { 'name':  'User',                'url': '/backend/user'},
                         { 'name':  'Settings',            'url': '/backend/setting'},
                     ]
                 }

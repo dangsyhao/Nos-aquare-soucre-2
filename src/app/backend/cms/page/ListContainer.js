@@ -5,9 +5,9 @@ import {Dispatcher} from 'flux';
 import PageContainerView from 'backend-page-container/View';
 import PageContainerAction from 'backend-page-container/Action';
 import PageContainerStore from 'backend-page-container/Store';
-import DataTableView from './data-table/View';
-import DataTableStore from './data-table/Store';
-import DataTableAction from './data-table/Action';
+import DataTableView from './components/data-table/View';
+import DataTableStore from './components/data-table/Store';
+import DataTableAction from './components/data-table/Action';
 
 const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')

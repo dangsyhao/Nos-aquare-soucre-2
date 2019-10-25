@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Container} from 'flux/utils';
 import {Dispatcher} from 'flux';
 
-import FormLoginView from './form-login/View';
-import FormLoginStore from './form-login/Store';
-import FormLoginAction from './form-login/Action';
+import FormLoginView from './components/form-login/View';
+import FormLoginStore from './components/form-login/Store';
+import FormLoginAction from './components/form-login/Action';
 
 
 const _dispatcher = new Dispatcher();

@@ -2,60 +2,56 @@ import React, {Component} from 'react';
 import {Container} from 'flux/utils';
 import {Dispatcher} from 'flux';
 
+
 import PageContainerView from 'backend-page-container/View';
 import PageContainerAction from 'backend-page-container/Action';
 import PageContainerStore from 'backend-page-container/Store';
-import FormView from './form-update/View';
-import FormStore from './form-update/Store';
-import FormAction from './form-update/Action';
+import FormUpdateView from './components/form-update/View';
+import FormUpdateStore from './components/form-update/Store';
+import FormUpdateAction from './components/form-update/Action';
 
-import UserView from 'backend-page-container/user-service/View';
-import UserStore from 'backend-page-container/user-service/Store';
-import UserAction from 'backend-page-container/user-service/Action';
 
 const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
-const _formStore = new FormStore(_dispatcher, 'form')
-const _formAction = new FormAction(_dispatcher, 'form')
+const _formUpdateStore = new FormUpdateStore(_dispatcher, 'form-update')
+const _formUpdateAction = new FormUpdateAction(_dispatcher, 'form-update')
 
-const _userStore = new UserStore(_dispatcher, 'user-service-backend')
-const _userAction = new UserAction(_dispatcher, 'user-service-backend')
-class CreateContainer extends Component {
+
+_pageContainerAction.setSelectedMenu('text_block')
+class UpdateContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
-            _formStore,
-            _userStore
+            _formUpdateStore,
         ];
     }
 
     static calculateState(prevState) {
         return {
-            pageContainer:    _pageContainerStore.getState(),
-            form:             _formStore.getState(),
-            userState:        _userStore.getState()
+            pageContainer:       _pageContainerStore.getState(),
+            formUpdate:          _formUpdateStore.getState(),
         }
     }
 
     render() {
         return (
-            <PageContainerView pageContainer={this.state.pageContainer}
-                    userAction={_userAction}
-                    userComponent={<UserView userdata={this.state.userState} action={_userAction}/>}>
-                <div className="portlet">
-                    <div className="portlet-title">
-                        <div className="caption">
-                            <span className="caption-subject">Update text block</span>
-                        </div>
-                        <div className="actions">
-                        </div>
+            <PageContainerView pageContainer={this.state.pageContainer} action={_pageContainerAction}>
+                <div className="content bd-b" style={{ marginTop: 50, paddingBottom: 10, paddingLeft: 25, backgroundColor: '#FFFFFF' }}>
+                    <div className="d-sm-flex align-items-center justify-content-between mg-b-5">
+                        <h5 className="mg-b-0 tx-spacing--1">Update Text Block</h5>
                     </div>
-                    <div className="portlet-body">
-                        <FormView
-                            form={this.state.form}
-                            action={_formAction}
-                        />
+                </div>
+                <div className="content" style={{ paddingLeft: 10 }}>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <FormUpdateView
+                                    form={this.state.formUpdate}
+                                    action={_formUpdateAction}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </PageContainerView>
@@ -63,4 +59,4 @@ class CreateContainer extends Component {
     }
 }
 
-export default Container.create(CreateContainer);
+export default Container.create(UpdateContainer);

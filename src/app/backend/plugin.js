@@ -86,8 +86,8 @@ class Plugin {
         server.express().get('/backend/text_block/update',               server.helper().serveBundlePage('backend-text_block-update'))
 
         // Setting
-        server.webpack().addBundle('backend-setting',                   __dirname + '/container/setting/bundles/update.js')
-        server.express().get('/backend/setting',                        server.helper().serveBundlePage('backend-setting'))
+        server.webpack().addBundle('backend-setting-update',             __dirname + '/cms/setting/bundles/update.js')
+        server.express().get('/backend/setting',                        server.helper().serveBundlePage('backend-setting-update'))
 
 
         // User

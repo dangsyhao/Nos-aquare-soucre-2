@@ -9,11 +9,13 @@ class View extends Component {
     render() {
         var _this = this;
         return (
-          <BlockUi tag="div" blocking={this.props.pageDetail.get('isLoading')}>
-            <div style={{marginBottom: 20}}>
-              <a href={this.props.pageDetail.get('url')} className="uppercase">{this.props.pageDetail.get('title')}</a>
-            </div>
-          </BlockUi>
+            <BlockUi tag="div" blocking={this.props.pageDetail.get('isLoading')}>
+                <div className="card">
+                    <div className="card-body">
+                        Link: <a href={this.props.pageDetail.get('url')}>{this.props.pageDetail.get('title')}</a>
+                    </div>
+                </div>
+            </BlockUi>
         )
     }
 }

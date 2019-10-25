@@ -5,9 +5,8 @@ class View extends LibraryDataTable.View {
     renderTableHeader() {
         return <thead>
             <tr>
-                <th width="5%">ID</th>
-                <th width="20%">Kind</th>
-                <th width="50%">Data</th>
+                <th width="15%">Kind</th>
+                <th width="60%">Data</th>
                 <th width="10%">Sort Order</th>
                 <th></th>
             </tr>
@@ -18,7 +17,7 @@ class View extends LibraryDataTable.View {
             case 'banner':
                 return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_banner?id=" + record.id}>Edit</a>
             case 'text':
-                return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_text?id=" + record.id}>Edit</a>
+                return <a href={"/backend/page_block/update_text?id=" + record.id + '&page_id=' + __params.query.id}>Edit</a>
             case 'text-column':
                 return <a className="btn btn-xs btn-primary" href={"/backend/page_block/update_text_column?id=" + record.id}>Edit</a>
             case 'horizontal-step':
@@ -68,13 +67,12 @@ class View extends LibraryDataTable.View {
                 {
                     this.props.dataTable.get('records').map(function(record, i) {
                         return (<tr key={"record-" + i}>
-                            <td>{ record.id }</td>
                             <td>{ record.kind }</td>
                             <td></td>
                             <td>{ record.sort_order }</td>
                             <td>
-                                { _this.renderEditAction(record)}
-                                <a className="btn btn-xs btn-danger" onClick={e=> _this.props.action.delete(_this.props,record.id)}>Delete</a>
+                                { _this.renderEditAction(record)}&nbsp;|&nbsp;
+                                <a href="javascript:;" onClick={e=> _this.props.action.delete(_this.props,record.id)}>Delete</a>
                             </td>
                         </tr>)
                     })

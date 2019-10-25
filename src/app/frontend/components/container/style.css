@@ -1,23 +1,13 @@
-@import url('/public/static/jango/plugins/socicon/socicon.css');
-@import url('/public/static/jango/plugins/bootstrap-social/bootstrap-social.css');
-@import url('/public/static/jango/plugins/font-awesome/css/font-awesome.min.css');
-@import url('/public/static/jango/plugins/simple-line-icons/simple-line-icons.min.css');
-@import url('/public/static/jango/plugins/animate/animate.min.css');
-@import url('/public/static/jango/plugins/bootstrap/css/bootstrap.min.css');
 
-@import url('/public/static/jango/plugins/revo-slider/css/settings.css');
-@import url('/public/static/jango/plugins/revo-slider/css/layers.css');
-@import url('/public/static/jango/plugins/revo-slider/css/navigation.css');
-@import url('/public/static/jango/plugins/cubeportfolio/css/cubeportfolio.min.css');
-@import url('/public/static/jango/plugins/owl-carousel/assets/owl.carousel.css');
-@import url('/public/static/jango/plugins/fancybox/jquery.fancybox.css');
-@import url('/public/static/jango/plugins/slider-for-bootstrap/css/slider.css');
-
-@import url('/public/static/jango/plugins/ilightbox/css/ilightbox.css');
-@import url('/public/static/jango/demos/index/css/plugins.css');
-@import url('/public/static/jango/demos/index/css/components.css');
-@import url('/public/static/jango/demos/index/css/themes/default.css');
-@import url('/public/static/jango/demos/index/css/custom.css');
-@import url('/public/static/claya/fonts/cms_style-1.css');
-@import url('/public/static/claya/fonts/cms_style-2.css');
-@import url('/public/static/claya/fonts/cms_style-3.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/css/bootstrap.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/bootstrap-selector/css/bootstrap-select.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/themify-icon/themify-icons.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/elagent/style.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/flaticon/flaticon.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/animation/animate.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/owl-carousel/assets/owl.carousel.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/magnify-pop/magnific-popup.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/nice-select/nice-select.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/vendors/scroll/jquery.mCustomScrollbar.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/css/style.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/saasland-20191016/css/responsive.css');
