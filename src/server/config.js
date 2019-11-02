@@ -7,19 +7,7 @@ if (REACT_APP_ENV == 'dev')  {
         'static.url':                                '/public/static',
         'static.dir':                                __dirname + '/../static',
         'api.endpoint':                              'http://127.0.0.1:8230',
-        'translation.fallback_language':             'dev',
-        'ga-key':                                    'UA-66412728-2',
-        'translation.load_path':                     '/locales/{{lng}}/{{ns}}.json',
-        'fai-api.upper':                             'https://fashion-ai-api-upper.notasquare.vn',
-        //'fsai-api.landmark-detection':               'http://127.0.0.1:8001',
-        //'fsai-api.category-classification':          'http://127.0.0.1:8002',
-        //'fsai-api.pattern-recognition':              'http://127.0.0.1:8003',
-        //'fsai-api.sleeve-length-classification':     'http://127.0.0.1:8004',
-        //'fsai-api.landmark-detection':               'https://df-landmark-api.test.notasquare.vn',
-        //'fsai-api.category-classification':          'https://df-category-api.test.notasquare.vn',
-        //'fsai-api.pattern-recognition':              'https://df-pattern-api.test.notasquare.vn',
-        //'fsai-api.sleeve-length-classification':     'https://df-sleeve-api.test.notasquare.vn',
-
+        'theme-static.url':                          'https://s3.amazonaws.com/notasquare-themes/saasland-20191016',
     }
 } else if (REACT_APP_ENV == 'prod') {
     module.exports = {
@@ -28,13 +16,6 @@ if (REACT_APP_ENV == 'dev')  {
         'static.url':                                '/public/static',
         'static.dir':                                __dirname + '/../static',
         'api.endpoint':                              'https://cms-api.notasquare.vn',
-        'translation.fallback_language':             'en',
-        'ga-key':                                    'UA-66412728-2',
-        'translation.load_path':                     'https://cms-api.notasquare.vn/text_block/load?lang={{lng}}',
-        'fai-api.upper':                             'https://fashion-ai-api-upper.notasquare.vn',
-        //'fsai-api.landmark-detection':               'https://df-landmark-api.test.notasquare.vn',
-        //'fsai-api.category-classification':          'https://df-category-api.test.notasquare.vn',
-        //'fsai-api.pattern-recognition':              'https://df-pattern-api.test.notasquare.vn',
-        //'fsai-api.sleeve-length-classification':     'https://df-sleeve-api.test.notasquare.vn',
+        'theme-static.url':                          'https://s3.amazonaws.com/notasquare-themes/saasland-20191016',
     }
 }

@@ -2,7 +2,7 @@ import Immutable from 'immutable';
 import {ReduceStore} from 'flux/utils';
 
 class Store extends ReduceStore {
-    constructor(dispatcher, id = 'container') {
+    constructor(dispatcher, id = 'home-case-study') {
         super(dispatcher)
         this.dispatcher = dispatcher
         this.id = id
@@ -10,12 +10,15 @@ class Store extends ReduceStore {
 
     getInitialState() {
         return Immutable.Map({
-            'applicationTitle': 'Not A Box CMS',
+            'menuId': 'all',
         })
     }
 
     reduce(state, action) {
         switch (action.type) {
+            case this.id + '/set-selected-menu':
+                state = state.set('menuId', action.menuId)
+                return state
         }
         return state;
     }

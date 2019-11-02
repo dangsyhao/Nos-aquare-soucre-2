@@ -20,19 +20,10 @@ class Plugin {
         server.webpack().addAlias('frontend-form', __dirname + '/components/fields/export.js')
 
         // CMS
-        server.webpack().addBundle('frontend-cms-page-view',            __dirname + '/cms/page/bundles/view.js')
-        server.express().get('/',                                       server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/why-genes-matter',                       server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/faq',                                    server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/about-us',                               server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/get-supplements',                        server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/press',                                  server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/blog',                                   server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/contact',                                server.helper().serveBundlePage('frontend-cms-page-view'))
-        server.express().get('/overview',                               server.helper().serveBundlePage('frontend-cms-page-view'))
-
-        // 404
-        server.express().get('*',                                       server.helper().serveBundlePage('frontend-cms-page-view'))
+        server.webpack().addBundle('frontend-pages-home',                                __dirname + '/pages/bundles/home.js')
+        server.webpack().addBundle('frontend-pages-technology-web-technologies',         __dirname + '/pages/bundles/technology_web_technologies.js')
+        server.express().get('/',                                                        server.helper().serveBundlePage('frontend-pages-home'))
+        server.express().get('/technology/web-technologies',                             server.helper().serveBundlePage('frontend-pages-technology-web-technologies'))
     }
 }
 
