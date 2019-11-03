@@ -17,6 +17,7 @@ const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-containe
 const _homeCaseStudyStore = new HomeCaseStudyStore(_dispatcher, 'home-case-study')
 const _homeCaseStudyAction = new HomeCaseStudyAction(_dispatcher, 'home-case-study')
 
+_pageContainerAction.setSelectedMenu('home')
 class HomeContainer extends Component {
     static getStores() {
         return [

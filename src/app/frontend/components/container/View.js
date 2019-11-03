@@ -11,6 +11,8 @@ class View extends Component {
     }
     render() {
         var _this = this;
+        var menuId = this.props.pageContainer.get('menuId')
+
         return (
             <div className="body_wrapper">
                 <header className="header_area navbar_fixed">
@@ -20,10 +22,10 @@ class View extends Component {
 
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav menu pl_120 mr-auto ml-auto">
-                                    <li className="nav-item dropdown submenu mega_menu mega_menu_two active">
+                                    <li className={"nav-item dropdown submenu mega_menu mega_menu_two " + (menuId == 'home' ? 'active' : '')}>
                                         <a className="nav-link dropdown-toggle" href="/">Home</a>
                                     </li>
-                                    <li className="nav-item dropdown submenu">
+                                    <li className={"nav-item dropdown submenu " + (menuId == 'services' ? 'active' : '')}>
                                         <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Services
                                         </a>
@@ -33,7 +35,7 @@ class View extends Component {
                                             <li className="nav-item"><a href="blog-grid-two.html" className="nav-link">Mobile Application Development</a></li>
                                         </ul>
                                     </li>
-                                    <li className="nav-item dropdown submenu">
+                                    <li className={"nav-item dropdown submenu " + (menuId == 'technology' ? 'active' : '')}>
                                         <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Technology
                                         </a>

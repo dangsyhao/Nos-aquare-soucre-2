@@ -10,12 +10,16 @@ class Store extends ReduceStore {
 
     getInitialState() {
         return Immutable.Map({
-            'applicationTitle': 'Not A Box CMS',
+            'applicationTitle':    'Not A Box CMS',
+            'menuId':              '',
         })
     }
 
     reduce(state, action) {
         switch (action.type) {
+            case this.id + '/set-selected-menu':
+                state = state.set('menuId', action.menuId)
+                return state
         }
         return state;
     }
