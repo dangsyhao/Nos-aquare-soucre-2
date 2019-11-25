@@ -7,22 +7,38 @@ import { translate } from 'react-i18next';
 import PageContainerView from 'frontend-components/container/View';
 import PageContainerAction from 'frontend-components/container/Action';
 import PageContainerStore from 'frontend-components/container/Store';
+import WhatIsWebApplicationView from './../components/what-is-web-application/View';
+import WhatIsWebApplicationAction from './../components/what-is-web-application/Action';
+import WhatIsWebApplicationStore from './../components/what-is-web-application/Store';
+import TechnologyWebTechnologiesView from './../components/technology-web-technologies/View';
+import TechnologyWebTechnologiesAction from './../components/technology-web-technologies/Action';
+import TechnologyWebTechnologiesStore from './../components/technology-web-technologies/Store';
+
 
 const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
+const _whatIsWebApplicationStore = new WhatIsWebApplicationStore(_dispatcher, 'what-is-web-application')
+const _whatIsWebApplicationAction = new WhatIsWebApplicationAction(_dispatcher, 'what-is-web-application')
+const _technologyWebTechnologiesStore = new TechnologyWebTechnologiesStore(_dispatcher, 'technology-web-technologies')
+const _technologyWebTechnologiesAction = new TechnologyWebTechnologiesAction(_dispatcher, 'technology-web-technologies')
+
 
 _pageContainerAction.setSelectedMenu('technology')
 class TechnologyWebTechnologiesContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
+            _whatIsWebApplicationStore,
+            _technologyWebTechnologiesStore,
         ];
     }
 
     static calculateState(prevState) {
         return {
-            pageContainer:        _pageContainerStore.getState(),
+            pageContainer:                _pageContainerStore.getState(),
+            whatIsWebApplication:         _whatIsWebApplicationStore.getState(),
+            technologyWebTechnologies:    _technologyWebTechnologiesStore.getState(),
         }
     }
 
@@ -53,7 +69,7 @@ class TechnologyWebTechnologiesContainer extends Component {
                 </section>
 
 
-                <section className="app_featured_area" style={{ padding: 0, marginTop: -200 }}>
+                <section className="app_featured_area" style={{ padding: 0, marginTop: -200, paddingBottom: 200  }}>
                     <div className="container">
                         <div className="row flex-row-reverse app_feature_info">
                             <div className="col-lg-6">
@@ -87,6 +103,17 @@ class TechnologyWebTechnologiesContainer extends Component {
                         </div>
                     </div>
                 </section>
+
+                <WhatIsWebApplicationView
+                    data={this.state.whatIsWebApplication}
+                    action={_whatIsWebApplicationAction}
+                />
+
+
+                <TechnologyWebTechnologiesView
+                    data={this.state.technologyWebTechnologies}
+                    action={_technologyWebTechnologiesAction}
+                />
             </PageContainerView>
         )
     }
