@@ -4,197 +4,364 @@ import {Dispatcher} from 'flux';
 import { translate } from 'react-i18next';
 
 
-import PageContainerView from 'frontend-components/container/View';
-import PageContainerAction from 'frontend-components/container/Action';
-import PageContainerStore from 'frontend-components/container/Store';
-import HomeCaseStudyView from './../components/home-case-study/View';
-import HomeCaseStudyAction from './../components/home-case-study/Action';
-import HomeCaseStudyStore from './../components/home-case-study/Store';
+import PageContainerView from 'frontend-components/page-container/View';
+import PageContainerAction from 'frontend-components/page-container/Action';
+import PageContainerStore from 'frontend-components/page-container/Store';
 
 const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
-const _homeCaseStudyStore = new HomeCaseStudyStore(_dispatcher, 'home-case-study')
-const _homeCaseStudyAction = new HomeCaseStudyAction(_dispatcher, 'home-case-study')
+
 
 _pageContainerAction.setSelectedMenu('home')
 class HomeContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
-            _homeCaseStudyStore,
         ];
     }
 
     static calculateState(prevState) {
         return {
             pageContainer:        _pageContainerStore.getState(),
-            homeCaseStudy:        _homeCaseStudyStore.getState(),
         }
     }
 
     render() {
         return (
             <PageContainerView pageContainer={this.state.pageContainer} action={_pageContainerAction}>
-                <section className="agency_banner_area bg_color">
-                    <img className="banner_shap" src="/public/static/banner_bg.png" alt="" />
-                    <div className="container custom_container">
+                <section className="bg-half-170 border-bottom agency-wrapper" id="home">
+                    <div className="home-center">
+                        <div className="home-desc-center">
+                            <div className="container">
+                                <div className="row align-items-center">
+                                    <div className="col-lg-7 col-md-7 order-1 order-md-2">
+                                        <div className="title-heading mt-4 ml-lg-5">
+                                            <h1 className="heading mb-3">We are <span className="text-primary">Full-Stack</span><br/> Software Agency</h1>
+                                            <p className="para-desc text-muted">We provide an all-in-one custom software development services for SME and start-ups, everything you need to launch and scale your business.</p>
+                                            <div className="watch-video mt-4 pt-2">
+                                                <a href="javascript:void(0)" className="btn btn-primary">Learn More <i className="mdi mdi-chevron-right"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-lg-5 col-md-5 order-2 order-md-1 mt-4 pt-2 mt-sm-0 pt-sm-0">
+                                        <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/illustrator/working_with_computer.svg" className="img-fluid" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="section" style={{ paddingBottom: 200 }}>
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-12 text-center">
+                                <div className="section-title mb-4 pb-2">
+                                    <h4 className="main-title mb-4">What We Do ?</h4>
+                                </div>
+                            </div>
+                        </div>
                         <div className="row">
-                            <div className="col-lg-5 d-flex align-items-center">
-                                <div className="agency_content">
-                                    <h2 className="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">Full-Stack Custom Software Development</h2>
-                                    <p className="f_400 l_height28 wow fadeInLeft" data-wow-delay="0.4s">We provide an all-in-one custom software development services for SME and start-ups, everything you need to launch and scale your business!</p>
-                                    <div className="action_btn d-flex align-items-center mt_60">
-                                        <a href="#" className="btn_hover agency_banner_btn wow fadeInLeft" data-wow-delay="0.5s">Let{"'"}s talk about your Business</a>
+                            <div className="col-md-4 col-12">
+                                <div className="features text-center">
+                                    <div className="image position-relative d-inline-block">
+                                        <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/icon/pen.svg" alt="" />
+                                    </div>
+
+                                    <div className="content mt-4">
+                                        <h4 className="title-2">Business Process Optimization</h4>
+                                        <p className="text-muted mb-0">Analyse, Optimize, Automate, Enhance your Business Process Efficiency using Custom-built Software Solution</p>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-7 text-right">
-                                <img className="protype_img wow fadeInRight" data-wow-delay="0.3s" src="/public/static/banner_img.png" alt="" />
+
+                            <div className="col-md-4 col-12 mt-5 mt-sm-0">
+                                <div className="features text-center">
+                                    <div className="image position-relative d-inline-block">
+                                        <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/icon/video.svg" alt="" />
+                                    </div>
+
+                                    <div className="content mt-4">
+                                        <h4 className="title-2">Web Application Development</h4>
+                                        <p className="text-muted mb-0">Strengthen your Brand by providing your Services as a unique custom-built Web-based Application</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-md-4 col-12 mt-5 mt-sm-0">
+                                <div className="features text-center">
+                                    <div className="image position-relative d-inline-block">
+                                        <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/icon/intellectual.svg" alt="" />
+                                    </div>
+
+                                    <div className="content mt-4">
+                                        <h4 className="title-2">Mobile Application Development</h4>
+                                        <p className="text-muted mb-0">Connect to your End User as a unique custom-built native Mobile Application</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="erp_analytics_area" style={{ background: __params.config['theme-static.url'] + '/img/erp-home/background.png'}} style={{ height: 680, marginTop: -350 }}>
-                </section>
 
-                <section className="prototype_service_info" style={{ marginTop: 100, marginBottom: 200 }}>
-                    <div className="symbols-pulse active">
-                        <div className="pulse-1"></div>
-                        <div className="pulse-2"></div>
-                        <div className="pulse-3"></div>
-                        <div className="pulse-4"></div>
-                        <div className="pulse-x"></div>
-                    </div>
+
+                <section className="section bg-light" style={{ paddingBottom: 200 }}>
                     <div className="container">
-                        <h2 className="f_size_30 f_600 t_color3 l_height45 text-center mb_90">What We Do</h2>
-                        <div className="row p_service_info">
-                            <div className="col-lg-4 col-sm-6">
-                                <div className="p_service_item pr_70">
-                                    <div className="icon icon_one"><i className="ti-panel"></i></div>
-                                    <h5 className="f_600 f_p t_color3">Business Process Optimization</h5>
-                                    <p className="f_400">Analyse, Optimize, Automate, Enhance your Business Process Efficiency using Custom-built Software Solution</p>
+                        <div className="row justify-content-center">
+                            <div className="col-12 text-center">
+                                <div className="section-title mb-4 pb-2">
+                                    <h4 className="main-title mb-4">Our Domains</h4>
+                                    <p className="text-muted para-desc mx-auto mb-0">Top domain industries we focus on</p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-sm-6">
-                                <div className="p_service_item pl_50 pr_20">
-                                    <div className="icon icon_two"><i className="ti-layout-grid2"></i></div>
-                                    <h5 className="f_600 f_p t_color3">Web Application Development</h5>
-                                    <p className="f_400">Strengthen your Brand by providing your Services as a unique custom-built Web-based Application</p>
+                        </div>
+
+                        <div className="row">
+                            <div className="col-lg-4 col-md-6 mt-4 pt-2">
+                                <div className="key-feature d-flex p-3 rounded bg-white shadow">
+                                    <div className="icon text-center rounded-pill mr-3">
+                                        <i className="mdi mdi-responsive text-primary"></i>
+                                    </div>
+                                    <div className="content mt-2">
+                                        <h4 className="title mb-0">Software as a Services</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-sm-6">
-                                <div className="p_service_item pl_70">
-                                    <div className="icon icon_three"><i className="ti-fullscreen"></i></div>
-                                    <h5 className="f_600 f_p t_color3">Mobile Application Development</h5>
-                                    <p className="f_400">Connect to your End User as a unique custom-built native Mobile Application</p>
+                            <div className="col-lg-4 col-md-6 mt-4 pt-2">
+                                <div className="key-feature d-flex p-3 rounded bg-white shadow">
+                                    <div className="icon text-center rounded-pill mr-3">
+                                        <i className="mdi mdi-internet-explorer text-primary"></i>
+                                    </div>
+                                    <div className="content mt-2">
+                                        <h4 className="title mb-0">Business Productivity</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 mt-4 pt-2">
+                                <div className="key-feature d-flex p-3 rounded bg-white shadow">
+                                    <div className="icon text-center rounded-pill mr-3">
+                                        <i className="mdi mdi-cryengine text-primary"></i>
+                                    </div>
+                                    <div className="content mt-2">
+                                        <h4 className="title mb-0">Developer Tools</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 mt-4 pt-2">
+                                <div className="key-feature d-flex p-3 rounded bg-white shadow">
+                                    <div className="icon text-center rounded-pill mr-3">
+                                        <i className="mdi mdi-bootstrap text-primary"></i>
+                                    </div>
+                                    <div className="content mt-2">
+                                        <h4 className="title mb-0">e-Learning</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 mt-4 pt-2">
+                                <div className="key-feature d-flex p-3 rounded bg-white shadow">
+                                    <div className="icon text-center rounded-pill mr-3">
+                                        <i className="mdi mdi-cube-outline text-primary"></i>
+                                    </div>
+                                    <div className="content mt-2">
+                                        <h4 className="title mb-0">Machine Learning</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-md-6 mt-4 pt-2">
+                                <div className="key-feature d-flex p-3 rounded bg-white shadow">
+                                    <div className="icon text-center rounded-pill mr-3">
+                                        <i className="mdi mdi-sass text-primary"></i>
+                                    </div>
+                                    <div className="content mt-2">
+                                        <h4 className="title mb-0">Software Engineering</h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="support_integration_area">
-                    <div className="container">
-                        <div className="sec_title text-center mb_70 wow fadeInUp">
-                            <h2 className="f_p f_size_30 l_height50 f_600 t_color3">Our Domains</h2>
-                            <p className="f_400 f_size_16 mb-0">Top domain industries we focus on...</p>
-                        </div>
-                        <div className="row flex-row-reverse">
-                            <div className="col-lg-9 col-md-10 col-sm-12">
-                                <div className="row">
-                                    <div className="col-lg-4 col-md-4 col-sm-6">
-                                        <div className="s_integration_item">
-                                            <img src={ __params.config['theme-static.url'] + "/img/new-home/kissmetrics.png" } alt="" />
-                                            <h5>SaaS</h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6">
-                                        <div className="s_integration_item">
-                                            <img src={ __params.config['theme-static.url'] + "/img/new-home/metorik.png" } alt="" />
-                                            <h5>Business Productivity</h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6">
-                                        <div className="s_integration_item">
-                                            <img src={ __params.config['theme-static.url'] + "/img/new-home/nicereply-1.png" } alt="" />
-                                            <h5>Developer Tools</h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6">
-                                        <div className="s_integration_item">
-                                            <img src={ __params.config['theme-static.url'] + "/img/new-home/campfire.png" } alt="" />
-                                            <h5>eCommerce</h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6">
-                                        <div className="s_integration_item">
-                                            <img src={ __params.config['theme-static.url'] + "/img/new-home/webhooks.png" } alt="" />
-                                            <h5>Machine Learning</h5>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-4 col-md-4 col-sm-6">
-                                        <div className="s_integration_item">
-                                            <img src={ __params.config['theme-static.url'] + "/img/new-home/briteverify.png" } alt="" />
-                                            <h5>Health and Wellness</h5>
-                                        </div>
-                                    </div>
+                <section className="section" style={{ paddingBottom: 200 }}>
+                    <div className="container pt-50">
+                        <div className="row justify-content-center">
+                            <div className="col-12 text-center">
+                                <div className="section-title mb-4 pb-2">
+                                    <h4 className="main-title mb-4">Our Latest Projects</h4>
+                                    <p className="text-muted para-desc mx-auto mb-0">More than 50+ custom software solution, from interactive web application to trained-from-the-scratch AI-powered software system</p>
                                 </div>
-                            </div>
-                            <div className="col-lg-3 col-md-2 col-sm-12">
-                                <img className="integration_img" src={ __params.config['theme-static.url'] + "/img/new-home/tree.png" } alt="" />
                             </div>
                         </div>
                     </div>
-                </section>
-
-                <HomeCaseStudyView data={this.state.homeCaseStudy} action={_homeCaseStudyAction} />
-
-
-                <section className="action_area_three sec_pad">
-                    <div className="curved"></div>
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-12">
-                                <div className="action_content text-center">
-                                    <h2 className="f_600 f_size_30 l_height45 mb_40">{"Let's talk abour your Project"}?</h2>
-                                    <a href="#" className="about_btn white_btn wow fadeInLeft">Just SaasLand IT</a>
+                            <div className="col-lg-6 col-md-6 mt-4 pt-2">
+                                <div className="work-container position-relative rounded">
+                                    <div className="position-relative overflow-hidden">
+                                        <img src="https://via.placeholder.com/800X533//88929f/5a6270C/O%20https://placeholder.com/" className="img-fluid rounded" alt="work-image" />
+                                        <div className="overlay-work"></div>
+                                        <div className="content">
+                                            <a href="page_work_detail.html" className="title text-white d-block font-weight-bold">Rootine</a>
+                                            <small className="text-light">Web Application</small>
+                                        </div>
+                                        <div className="client">
+                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Rachel Sander</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 mt-4 pt-2">
+                                <div className="work-container position-relative rounded">
+                                    <div className="position-relative overflow-hidden">
+                                        <img src="https://via.placeholder.com/800X533//88929f/5a6270C/O%20https://placeholder.com/" className="img-fluid rounded" alt="work-image" />
+                                        <div className="overlay-work"></div>
+                                        <div className="content">
+                                            <a href="page_work_detail.html" className="title text-white d-block font-weight-bold">Form Scanner</a>
+                                            <small className="text-light">Business Productivity</small>
+                                        </div>
+                                        <div className="client">
+                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Novogenia</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 mt-4 pt-2">
+                                <div className="work-container position-relative rounded">
+                                    <div className="position-relative overflow-hidden">
+                                        <img src="https://via.placeholder.com/800X533//88929f/5a6270C/O%20https://placeholder.com/" className="img-fluid rounded" alt="work-image" />
+                                        <div className="overlay-work"></div>
+                                        <div className="content">
+                                            <a href="page_work_detail.html" className="title text-white d-block font-weight-bold">Quodbit A.I.</a>
+                                            <small className="text-light">Developer Tools</small>
+                                        </div>
+                                        <div className="client">
+                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Not A Square</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 col-md-6 mt-4 pt-2">
+                                <div className="work-container position-relative rounded">
+                                    <div className="position-relative overflow-hidden">
+                                        <img src="https://via.placeholder.com/800X533//88929f/5a6270C/O%20https://placeholder.com/" className="img-fluid rounded" alt="work-image" />
+                                        <div className="overlay-work"></div>
+                                        <div className="content">
+                                            <a href="page_work_detail.html" className="title text-white d-block font-weight-bold">Biogena App</a>
+                                            <small className="text-light">Mobile Application</small>
+                                        </div>
+                                        <div className="client">
+                                            <small className="text-light user d-block"><i className="mdi mdi-account"></i> Biogena</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row justify-content-center">
+                            <div className="col-12 text-center mt-4 pt-2">
+                                <a href="page_work.html" className="btn btn-primary">See More <i className="mdi mdi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section className="section bg-cta" style={{ background: 'url("http://landrick.react.themesbrand.com/static/media/bg03.4e5a286b.jpg") center center'}} id="cta">
+                    <div className="bg-overlay bg-overlay-gradient"></div>
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div className="col-12 text-center">
+                                <div className="section-title">
+                                    <h4 className="main-title text-white mb-4">We Never Stop Innovating</h4>
+                                    <p className="text-light para-desc mx-auto">Software is eating the world, simplifying then automating the way we get thing done. At our core, we are continuously and actively looking for innovative ideas, then implement software solution to simplify (or automate, if <b style={{ textDecoration: 'line-through'}}>possible</b> <i>there are enough training data</i>) the way human get work done</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="erp_customer_logo_area">
+                <section className="section" style={{ paddingBottom: 200 }}>
                     <div className="container">
-                        <div className="hosting_title erp_title text-center">
-                            <h2>Our Technologies</h2>
+                        <div className="justify-content-center row">
+                            <div className="col">
+                                <div className="section-title pb-2">
+                                    <h4 className="title">Blog</h4>
+                                </div>
+                            </div>
                         </div>
-                        <ul className="list-unstyled animation_inner">
-                            <li className="wow slideInnew2"><img src={ "/public/static/technology/001.png"} style={{ width: 80 }} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/02.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/03.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/04.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/05.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/06.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/07.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/08.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/09.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/10.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/11.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/12.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/13.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/14.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/15.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/16.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/17.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/18.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/19.png"} alt="" /></li>
-                            <li className="wow slideInnew2"><img src={ __params.config['theme-static.url'] + "/img/erp-home/img/20.png"} alt="" /></li>
-                        </ul>
-                        <div className="text-center">
-                            <a href="#" className="er_btn">Our Technology Stack</a>
+                        <div className="row">
+                            <div className="mt-4 pt-2 col-md-6 col-lg-4">
+                                <div className="blog position-relative overflow-hidden shadow rounded">
+                                    <div className="position-relative">
+                                        <img src="http://landrick.react.themesbrand.com/static/media/1.10d49531.jpg" className="img-fluid rounded-top" alt="" />
+                                        <div className="overlay rounded-top bg-dark"></div>
+                                    </div>
+                                    <div className="content p-4">
+                                        <h4><a className="title text-dark" href="/index-personal">Full-Stack Developers are the future of Software Development</a></h4>
+                                        <div className="post-meta mt-3">
+                                            <a className="text-muted float-right readmore" href="/index-personal">Read More <i className="mdi mdi-chevron-right"></i></a>
+                                            <ul className="list-unstyled mb-0">
+                                                <li className="list-inline-item mr-2"><a className="text-muted like" href="/index-personal"><i className="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                                <li className="list-inline-item"><a className="text-muted comments" href="/index-personal"><i className="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="author">
+                                        <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
+                                        <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-4 pt-2 col-md-6 col-lg-4">
+                                <div className="blog position-relative overflow-hidden shadow rounded">
+                                    <div className="position-relative">
+                                        <img src="http://landrick.react.themesbrand.com/static/media/01.716ab2cf.jpg" className="img-fluid rounded-top" alt="" />
+                                        <div className="overlay rounded-top bg-dark"></div>
+                                    </div>
+                                    <div className="content p-4">
+                                        <h4><a className="title text-dark" href="/index-personal">Lightly-supervised Software Development Process</a></h4>
+                                        <div className="post-meta mt-3">
+                                            <a className="text-muted float-right readmore" href="/index-personal">Read More <i className="mdi mdi-chevron-right"></i></a>
+                                            <ul className="list-unstyled mb-0">
+                                                <li className="list-inline-item mr-2"><a className="text-muted like" href="/index-personal"><i className="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                                <li className="list-inline-item"><a className="text-muted comments" href="/index-personal"><i className="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="author">
+                                        <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
+                                        <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-4 pt-2 col-md-6 col-lg-4">
+                                <div className="blog position-relative overflow-hidden shadow rounded">
+                                    <div className="position-relative">
+                                        <img src="http://landrick.react.themesbrand.com/static/media/02.f6ad9413.jpg" className="img-fluid rounded-top" alt="" />
+                                        <div className="overlay rounded-top bg-dark"></div>
+                                    </div>
+                                    <div className="content p-4">
+                                        <h4><a className="title text-dark" href="/index-personal">How Quodbit A.I. simplify Software Development</a></h4>
+                                        <div className="post-meta mt-3">
+                                            <a className="text-muted float-right readmore" href="/index-personal">Read More <i className="mdi mdi-chevron-right"></i></a>
+                                            <ul className="list-unstyled mb-0">
+                                                <li className="list-inline-item mr-2"><a className="text-muted like" href="/index-personal"><i className="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                                <li className="list-inline-item"><a className="text-muted comments" href="/index-personal"><i className="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="author">
+                                        <small className="text-light user d-block"><i className="mdi mdi-account"></i> Calvin Carlo</small>
+                                        <small className="text-light date"><i className="mdi mdi-calendar-check"></i> 13th August, 2019</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="mt-4 pt-2 col">
+                                <a className="btn btn-primary" href="/page-blog">See More <i className="mdi mdi-chevron-right"></i></a>
+                            </div>
                         </div>
                     </div>
                 </section>

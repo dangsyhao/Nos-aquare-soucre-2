@@ -1,0 +1,11 @@
+
+@import url('https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/css/bootstrap.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/css/magnific-popup.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/css/materialdesignicons.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/css/owl.carousel.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/css/owl.theme.default.min.css');
+@import url('https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/css/style.css');
+
+.section-title:hover .abc {
+    opacity: 1;
+}

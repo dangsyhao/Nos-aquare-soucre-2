@@ -45,6 +45,7 @@
     "react-read-more": "^1.0.0",
     "react-render-html": "^0.6.0",
     "react-responsive-carousel": "^3.1.30",
+    "react-fullpage": "0.1.19",
     "request": "^2.81.0"
   },
   "devDependencies": {
