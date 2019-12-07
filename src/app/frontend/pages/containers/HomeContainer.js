@@ -97,8 +97,8 @@ class HomeContainer extends Component {
                                     </div>
 
                                     <div className="content mt-4">
-                                        <h4 className="title-2">Mobile Application Development</h4>
-                                        <p className="text-muted mb-0">Connect to your End User as a unique custom-built native Mobile Application</p>
+                                        <h4 className="title-2">Full-stack Product Development</h4>
+                                        <p className="text-muted mb-0">Design, build, launch and operate the software-based products</p>
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +320,7 @@ class HomeContainer extends Component {
                                         <div className="overlay rounded-top bg-dark"></div>
                                     </div>
                                     <div className="content p-4">
-                                        <h4><a className="title text-dark" href="/index-personal">Lightly-supervised Software Development Process</a></h4>
+                                        <h4><a className="title text-dark" href="/index-personal">Why Product Teams need Full-Stack Software Agency ?</a></h4>
                                         <div className="post-meta mt-3">
                                             <a className="text-muted float-right readmore" href="/index-personal">Read More <i className="mdi mdi-chevron-right"></i></a>
                                             <ul className="list-unstyled mb-0">

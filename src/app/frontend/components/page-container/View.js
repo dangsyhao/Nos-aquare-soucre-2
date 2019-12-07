@@ -22,22 +22,21 @@ class View extends Component {
                         </div>
                         <div id="navigation">
                             <ul className="navigation-menu">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li className="has-submenu">
                                     <a href="javascript:void(0)">Services</a><span className="menu-arrow"></span>
                                     <ul className="submenu">
                                         <li><a href="index_saas.html">Business Process Optimization</a></li>
                                         <li><a href="index_saas.html">Web Application Development</a></li>
-                                        <li><a href="index_saas.html">Mobile Application Development</a></li>
+                                        <li><a href="index_saas.html">Product Development</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
                                     <a href="javascript:void(0)">Technology</a><span className="menu-arrow"></span>
                                     <ul className="submenu">
-                                        <li><a href="index_saas.html">Web Technologies</a></li>
-                                        <li><a href="index_saas.html">Mobile Technologies</a></li>
-                                        <li><a href="index_saas.html">Cloud Platform</a></li>
-                                        <li><a href="index_saas.html">Machine Learning</a></li>
+                                        <li><a href="/technology/web-technologies">Web Technologies</a></li>
+                                        <li><a href="/technology/cloud-platform">Cloud Platform</a></li>
+                                        <li><a href="/technology/machine-learning">Machine Learning</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
@@ -48,17 +47,17 @@ class View extends Component {
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
-                                    <a href="javascript:void(0)">Portfolio</a><span className="menu-arrow"></span>
+                                    <a href="javascript:void(0)">About Us</a><span className="menu-arrow"></span>
                                     <ul className="submenu">
-                                        <li><a href="index_saas.html">Business Application</a></li>
-                                        <li><a href="index_saas.html">Web Application</a></li>
-                                        <li><a href="index_saas.html">Mobile App</a></li>
-                                        <li><a href="index_saas.html">Web Design</a></li>
-                                        <li><a href="index_saas.html">Machine Learning</a></li>
+                                        <li><a href="/about-us/portfolio">Portfolio</a></li>
+                                        <li><a href="index_saas.html">The Team</a></li>
+                                        <li><a href="index_saas.html">The Investor</a></li>
+                                        <li><a href="index_saas.html">The Blue Print</a></li>
+                                        <li><a href="index_saas.html">The Process</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
-                                    <a href="javascript:void(0)">About us</a>
+                                    <a href="javascript:void(0)">Blog</a>
                                 </li>
                             </ul>
                         </div>
