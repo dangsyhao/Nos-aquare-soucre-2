@@ -200,7 +200,7 @@ class TechnologyMachineLearningContainer extends Component {
                         <div className="row justify-content-center">
                             <div className="col-12 text-center">
                                 <div className="section-title">
-                                    <h4 className="main-title text-white mb-4">Machine Learning is simplifying how we get thing done</h4>
+                                    <h4 className="main-title text-white mb-4">Machine Learning is automating how we get thing done</h4>
                                 </div>
                             </div>
                         </div>

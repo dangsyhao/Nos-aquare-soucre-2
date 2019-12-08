@@ -26,9 +26,8 @@ class View extends Component {
                                 <li className="has-submenu">
                                     <a href="javascript:void(0)">Services</a><span className="menu-arrow"></span>
                                     <ul className="submenu">
-                                        <li><a href="index_saas.html">Business Process Optimization</a></li>
-                                        <li><a href="index_saas.html">Web Application Development</a></li>
-                                        <li><a href="index_saas.html">Product Development</a></li>
+                                        <li><a href="/services/business-process-optimization">Business Process Optimization</a></li>
+                                        <li><a href="/services/web-application-development">Web Application Development</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
@@ -42,22 +41,22 @@ class View extends Component {
                                 <li className="has-submenu">
                                     <a href="javascript:void(0)">Product</a><span className="menu-arrow"></span>
                                     <ul className="submenu">
-                                        <li><a href="index_saas.html">Not A Process</a></li>
-                                        <li><a href="index_saas.html">Quodbit</a></li>
+                                        <li><a href="/product/quodbit-core">Quodbit Core</a></li>
+                                        <li><a href="/product/quodbit-hiring">Quodbit Hiring</a></li>
+                                        <li><a href="/product/quodbit-training">Quodbit Training</a></li>
+                                        <li><a href="/product/quodbit-tagging">Quodbit Tagging</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
                                     <a href="javascript:void(0)">About Us</a><span className="menu-arrow"></span>
                                     <ul className="submenu">
                                         <li><a href="/about-us/portfolio">Portfolio</a></li>
-                                        <li><a href="index_saas.html">The Team</a></li>
-                                        <li><a href="index_saas.html">The Investor</a></li>
-                                        <li><a href="index_saas.html">The Blue Print</a></li>
-                                        <li><a href="index_saas.html">The Process</a></li>
+                                        <li><a href="/about-us/the-team">The Team</a></li>
+                                        <li><a href="/about-us/the-investor">The Investor</a></li>
                                     </ul>
                                 </li>
                                 <li className="has-submenu">
-                                    <a href="javascript:void(0)">Blog</a>
+                                    <a href="/blog">Blog</a>
                                 </li>
                             </ul>
                         </div>
