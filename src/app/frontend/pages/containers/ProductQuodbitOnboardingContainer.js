@@ -16,7 +16,7 @@ const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-containe
 
 
 _pageContainerAction.setSelectedMenu('product')
-class ProductQuodbitTrainingContainer extends Component {
+class ProductQuodbitOnboardingContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
@@ -40,8 +40,8 @@ class ProductQuodbitTrainingContainer extends Component {
                                     <div className="text-center col-md-7 col-lg-7" style={{ paddingTop: 100 }}>
                                         <div className="title-heading mt-0 mt-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                             <span className="badge badge-outline-primary rounded" style={{ float: 'right', marginTop: -50 }}>Under development</span>
-                                            <h2 className="heading mb-3" style={{ fontSize: 40 }}>Quodbit Training</h2>
-                                            <p className="para-desc text-muted">Reduce the training time from 3-month to 2-weeks by curating the materials that will be used actually in Source Code</p>
+                                            <h2 className="heading mb-3" style={{ fontSize: 40 }}>Quodbit Onboarding</h2>
+                                            <p className="para-desc text-muted">Reduce the project onboarding time from 3-month to 2-weeks by curating the relevant materials based on Source Code</p>
                                         </div>
                                     </div>
                                 </div>
@@ -82,4 +82,4 @@ class ProductQuodbitTrainingContainer extends Component {
         )
     }
 }
-export default Container.create(ProductQuodbitTrainingContainer);
+export default Container.create(ProductQuodbitOnboardingContainer);

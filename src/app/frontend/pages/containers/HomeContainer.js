@@ -64,7 +64,7 @@ class HomeContainer extends Component {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-md-6 col-12">
+                            <div className="col-md-4 col-12">
                                 <div className="features text-center">
                                     <div className="image position-relative d-inline-block">
                                         <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/icon/pen.svg" alt="" />
@@ -77,7 +77,7 @@ class HomeContainer extends Component {
                                 </div>
                             </div>
 
-                            <div className="col-md-6 col-12 mt-5 mt-sm-0">
+                            <div className="col-md-4 col-12 mt-5 mt-sm-0">
                                 <div className="features text-center">
                                     <div className="image position-relative d-inline-block">
                                         <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/icon/video.svg" alt="" />
@@ -86,6 +86,19 @@ class HomeContainer extends Component {
                                     <div className="content mt-4">
                                         <h4 className="title-2">Web Application Development</h4>
                                         <p className="text-muted mb-0">Strengthen your Brand by providing your Services as a unique custom-built Web-based Application</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="col-md-4 col-12 mt-5 mt-sm-0">
+                                <div className="features text-center">
+                                    <div className="image position-relative d-inline-block">
+                                        <img src="https://s3.amazonaws.com/notasquare-themes/landrick-1.5.0/images/icon/video.svg" alt="" />
+                                    </div>
+
+                                    <div className="content mt-4">
+                                        <h4 className="title-2">Product Development</h4>
+                                        <p className="text-muted mb-0">Research the market, find the problem, launch and scale the Product in form of Software-as-a-services</p>
                                     </div>
                                 </div>
                             </div>

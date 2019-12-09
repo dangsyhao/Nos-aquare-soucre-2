@@ -39,7 +39,7 @@ class AboutUsTheTeamContainer extends Component {
                                     <div className="text-center col-md-7 col-lg-7" style={{ paddingTop: 100 }}>
                                         <div className="title-heading mt-0 mt-md-5 mt-4 mt-sm-0 pt-2 pt-sm-0">
                                             <h1 className="heading mb-3">The Team</h1>
-                                            <p className="para-desc text-muted">Small and highly curated <span className="text-primary">elite all-rounders</span>, equiped with <span className="text-primary">full-stack</span> mindset</p>
+                                            <p className="para-desc text-muted"><span className="text-primary">Small</span> and highly curated <span className="text-primary">elite</span> all-rounders, share the <span className="text-primary">full-stack</span> mindset</p>
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +244,7 @@ class AboutUsTheTeamContainer extends Component {
                                         <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> 1 Year Experience</li>
                                         <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> 40-hour per week</li>
                                         <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> Product Development</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-currency-usd text-success mr-1"></i> Up to $2500</li>
+                                        <li className="list-inline-item text-muted"><i className="mdi mdi-currency-usd text-success mr-1"></i> Up to $2000</li>
                                     </ul>
                                     <a className="btn btn-outline-primary btn-block" href="/page-job-detail">View</a>
                                 </div>

@@ -43,7 +43,7 @@ class View extends Component {
                                     <ul className="submenu">
                                         <li><a href="/product/quodbit-core">Quodbit Core</a></li>
                                         <li><a href="/product/quodbit-hiring">Quodbit Hiring</a></li>
-                                        <li><a href="/product/quodbit-training">Quodbit Training</a></li>
+                                        <li><a href="/product/quodbit-onboarding">Quodbit Onboarding</a></li>
                                         <li><a href="/product/quodbit-tagging">Quodbit Tagging</a></li>
                                     </ul>
                                 </li>

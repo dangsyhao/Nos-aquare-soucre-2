@@ -84,7 +84,7 @@ class TechnologyMachineLearningContainer extends Component {
                                             </div>
                                             <div className="mt-4 pt-2 col-12 col">
                                                 <div className="counter-box position-relative counter-border bg-light shadow rounded p-4 pt-5 pb-5 text-center">
-                                                    <h4 className="counter-head">Human-like Automation</h4>
+                                                    <h4 className="counter-head">Human-level Automation</h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -290,7 +290,7 @@ class TechnologyMachineLearningContainer extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section>                
 
             </PageContainerView>
         )

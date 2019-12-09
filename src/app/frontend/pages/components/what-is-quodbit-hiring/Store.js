@@ -10,7 +10,7 @@ class Store extends ReduceStore {
 
     getInitialState() {
         return Immutable.Map({
-            'menuId': 'project_modularisation',
+            'menuId': 'job_description_generator',
         })
     }
 
