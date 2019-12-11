@@ -52,10 +52,8 @@ class View extends Component {
                 <div className="aside-body ps">
                     <ul className="nav nav-aside">
                         <li className={"nav-item " + (selectedMenuId == 'dashboard' ? 'active' : '')}><a href="/backend" className="nav-link"><span>Dashboard</span></a></li>
-                        <li className={"nav-item " + (selectedMenuId == 'page' ? 'active' : '')}><a href="/backend/page" className="nav-link"><span>Page</span></a></li>
-                        <li className={"nav-item " + (selectedMenuId == 'text_block' ? 'active' : '')}><a href="/backend/text_block" className="nav-link"><span>Text Block</span></a></li>
-                        <li className={"nav-item " + (selectedMenuId == 'user' ? 'active' : '')}><a href="/backend/user" className="nav-link"><span>User</span></a></li>
-                        <li className={"nav-item " + (selectedMenuId == 'setting' ? 'active' : '')}><a href="/backend/setting" className="nav-link"><span>Setting</span></a></li>
+                        <li className={"nav-item " + (selectedMenuId == 'job' ? 'active' : '')}><a href="/backend/job" className="nav-link"><span>Job</span></a></li>
+                        <li className={"nav-item " + (selectedMenuId == 'admin' ? 'active' : '')}><a href="/backend/admin" className="nav-link"><span>Admin</span></a></li>
                     </ul>
                 </div>
             </aside>

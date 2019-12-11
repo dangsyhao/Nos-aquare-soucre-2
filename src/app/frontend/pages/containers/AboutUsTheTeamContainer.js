@@ -123,7 +123,7 @@ class AboutUsTheTeamContainer extends Component {
                 <section className="section" style={{ paddingBottom: 100 }}>
                     <div className="container">
                         <div className="justify-content-center row">
-                            <div className="text-center mt-0  col-md-9">
+                            <div className="text-center mt-0 col-md-9">
                                 <div className="title-heading" style={{ paddingBottom: 80 }}>
                                     <h2 className=" mb-3">Our Greatest Minds</h2>
                                 </div>

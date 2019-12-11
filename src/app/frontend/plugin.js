@@ -29,6 +29,7 @@ class Plugin {
         server.webpack().addBundle('frontend-pages-product-quodbit-hiring',                   __dirname + '/pages/bundles/product_quodbit_hiring.js')
         server.webpack().addBundle('frontend-pages-product-quodbit-onboarding',               __dirname + '/pages/bundles/product_quodbit_onboarding.js')
         server.webpack().addBundle('frontend-pages-product-quodbit-tagging',                  __dirname + '/pages/bundles/product_quodbit_tagging.js')
+        server.webpack().addBundle('frontend-pages-product-quodbit-assist',                   __dirname + '/pages/bundles/product_quodbit_assist.js')
         server.webpack().addBundle('frontend-pages-blog',                                     __dirname + '/pages/bundles/blog.js')
         server.express().get('/',                                                  server.helper().serveBundlePage('frontend-pages-home'))
         server.express().get('/technology/web-technologies',                       server.helper().serveBundlePage('frontend-pages-technology-web-technologies'))
@@ -43,6 +44,7 @@ class Plugin {
         server.express().get('/product/quodbit-hiring',                            server.helper().serveBundlePage('frontend-pages-product-quodbit-hiring'))
         server.express().get('/product/quodbit-onboarding',                        server.helper().serveBundlePage('frontend-pages-product-quodbit-onboarding'))
         server.express().get('/product/quodbit-tagging',                           server.helper().serveBundlePage('frontend-pages-product-quodbit-tagging'))
+        server.express().get('/product/quodbit-assist',                            server.helper().serveBundlePage('frontend-pages-product-quodbit-assist'))
         server.express().get('/blog',                                              server.helper().serveBundlePage('frontend-pages-blog'))
     }
 }
