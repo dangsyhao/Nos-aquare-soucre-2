@@ -9,6 +9,7 @@ class Action extends LibraryForm.Form.Action {
             'title':                    new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'title'),
             'is_fulltime':              new LibraryForm.Common.Checkbox.ActionHelper(this.dispatcher, this.formId, 'is_fulltime'),
             'is_parttime':              new LibraryForm.Common.Checkbox.ActionHelper(this.dispatcher, this.formId, 'is_parttime'),
+            'hour_per_week':            new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'hour_per_week'),
             'location':                 new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'location'),
             'experience_required':      new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'experience_required'),
         }
@@ -28,6 +29,7 @@ class Action extends LibraryForm.Form.Action {
                     _this.helper('title').dispatchChangeValue(result.data.record.title)
                     _this.helper('is_fulltime').dispatchChangeValue(result.data.record.is_fulltime)
                     _this.helper('is_parttime').dispatchChangeValue(result.data.record.is_parttime)
+                    _this.helper('hour_per_week').dispatchChangeValue(result.data.record.hour_per_week)
                     _this.helper('location').dispatchChangeValue(result.data.record.location)
                     _this.helper('experience_required').dispatchChangeValue(result.data.record.experience_required)
                     _this.dispatchFormLoadSuccess();

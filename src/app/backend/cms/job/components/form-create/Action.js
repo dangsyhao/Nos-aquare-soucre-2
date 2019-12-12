@@ -9,6 +9,7 @@ class Action extends LibraryForm.Form.Action {
             'title':                    new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'title'),
             'is_fulltime':              new LibraryForm.Common.Checkbox.ActionHelper(this.dispatcher, this.formId, 'is_fulltime'),
             'is_parttime':              new LibraryForm.Common.Checkbox.ActionHelper(this.dispatcher, this.formId, 'is_parttime'),
+            'hour_per_week':              new LibraryForm.Common.Checkbox.ActionHelper(this.dispatcher, this.formId, 'hour_per_week'),
             'location':                 new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'location'),
             'experience_required':      new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'experience_required'),
         }

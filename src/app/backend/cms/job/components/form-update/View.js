@@ -34,6 +34,13 @@ class View extends LibraryForm.Form.View {
                             />
                         </div>
                         <div className="form-group">
+                            <label className="control-label">Hour Per Week</label>
+                            <LibraryForm.Common.Textbox.View
+                                data={this.props.form.get('fields').get('hour_per_week')}
+                                action={this.props.action}
+                            />
+                        </div>
+                        <div className="form-group">
                             <label className="control-label">Location</label>
                             <LibraryForm.Common.Textbox.View
                                 data={this.props.form.get('fields').get('location')}
