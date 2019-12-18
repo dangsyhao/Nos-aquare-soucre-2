@@ -1,13 +1,16 @@
-import AppDisPatCher from './dispatcher';
 
 class Action {
+    constructor(dispatcher,id="call_status_action1") {
+        this.dispatcher = dispatcher;
+        this.id = id;
+    }
+
     addNewText (text) {
-        AppDisPatCher.dispatch({
-            actionType:'ADD_NEW_STATUS',
+        this.dispatcher.dispatch({
+            actionType:this.id,
             text :text
         })
     }
 }
 
-var Action_obj = new Action();
-export default Action_obj
+export default Action
