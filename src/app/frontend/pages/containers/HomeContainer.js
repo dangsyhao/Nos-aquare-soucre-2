@@ -12,6 +12,8 @@ const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
 
+//status
+import StatusComponent from '../components/status/View';
 
 _pageContainerAction.setSelectedMenu('home')
 class HomeContainer extends Component {
@@ -41,6 +43,9 @@ class HomeContainer extends Component {
                                             <p className="para-desc text-muted">We provide an all-in-one custom software development services for SME and start-ups, everything you need to launch and scale your business.</p>
                                             <div className="watch-video mt-4 pt-2">
                                                 <a href="javascript:void(0)" className="btn btn-primary">Learn More <i className="mdi mdi-chevron-right"></i></a>
+                                            </div>
+                                            <div style={{marginTop:10}}>
+                                                <StatusComponent/>
                                             </div>
                                         </div>
                                     </div>
