@@ -13,9 +13,14 @@ const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container'
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
 
 //status
-import StatusComponent from '../components/status/View';
+import StatusView from '../components/status/View';
+import StatusAction from '../components/status/Action';
+import StatusStore from '../components/status/store';
 
-_pageContainerAction.setSelectedMenu('home')
+const _StatusAction = new StatusAction(_dispatcher,"call_status_action");
+const _StatusStore = new StatusStore(_dispatcher,"call_status_action");
+
+_pageContainerAction.setSelectedMenu('home');
 class HomeContainer extends Component {
     static getStores() {
         return [
@@ -45,7 +50,7 @@ class HomeContainer extends Component {
                                                 <a href="javascript:void(0)" className="btn btn-primary">Learn More <i className="mdi mdi-chevron-right"></i></a>
                                             </div>
                                             <div style={{marginTop:10}}>
-                                                <StatusComponent/>
+                                                <StatusView/>
                                             </div>
                                         </div>
                                     </div>

@@ -1,6 +1,4 @@
-import Action from './Action';
 import React from "react";
-import Store from './store'
 
 class View extends React.Component {
 

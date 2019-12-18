@@ -1,21 +1,24 @@
-import React from "react";
+import {ReduceStore} from 'flux/utils';
+import Immutable from 'immutable';
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 
+class Store extends ReduceStore {
 
-class Store extends React.Component{
-
-    constructor() {
+    constructor(_dispatcher,id="call_status_action") {
         super();
-        this.status = 'CHUA CAP NHAT STATUS !';
+       this._dispatcher = _dispatcher;
+       this.id = id;
+    }
+
+    getInitialState() {
+        return Immutable.Map({
+            'status': 'Chưa Cập Nhật Satus',
+        })
     }
 
     getStatus () {
         return this.status;
-    }
-
-    changeStatus(text) {
-         this.status = text;
     }
 
     emitChange() {
@@ -30,8 +33,18 @@ class Store extends React.Component{
         this.removeListener('change',calback);
     }
 
+    reduce(state,action){
+        switch (action.actionType) {
+            case this.id:
+                state = state.set('status', action.text);
+                this.emitChange();
+                return state
+        }
+
+        return state;
+
+    }
+
 }
 
-var Store_obj = new Store();
-Store_obj= assign(Store_obj,EventEmitter.prototype);
-export default Store_obj;
+export default Store;
