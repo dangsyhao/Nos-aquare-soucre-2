@@ -7,16 +7,15 @@ import { translate } from 'react-i18next';
 import PageContainerView from 'frontend-components/page-container/View';
 import PageContainerAction from 'frontend-components/page-container/Action';
 import PageContainerStore from 'frontend-components/page-container/Store';
-
-const _dispatcher = new Dispatcher();
-const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
-const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
-
 //status
 import StatusView from '../components/status/View';
 import StatusAction from '../components/status/Action';
 import StatusStore from '../components/status/store';
-
+//
+const _dispatcher = new Dispatcher();
+const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container');
+const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container');
+//status
 const _StatusAction = new StatusAction(_dispatcher,"call_status_action");
 const _StatusStore = new StatusStore(_dispatcher,"call_status_action");
 
@@ -25,12 +24,14 @@ class HomeContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
+            _StatusStore,
         ];
     }
 
     static calculateState(prevState) {
         return {
             pageContainer:        _pageContainerStore.getState(),
+            statusStore:                 _StatusStore.getState(),
         }
     }
 
@@ -50,7 +51,10 @@ class HomeContainer extends Component {
                                                 <a href="javascript:void(0)" className="btn btn-primary">Learn More <i className="mdi mdi-chevron-right"></i></a>
                                             </div>
                                             <div style={{marginTop:10}}>
-                                                <StatusView/>
+                                                <StatusView
+                                                    action={_StatusAction}
+                                                    data ={this.state.statusStore}
+                                                />
                                             </div>
                                         </div>
                                     </div>
@@ -115,9 +119,6 @@ class HomeContainer extends Component {
                         </div>
                     </div>
                 </section>
-
-
-
                 <section className="section bg-light" style={{ paddingBottom: 200 }}>
                     <div className="container">
                         <div className="row justify-content-center">

@@ -1,7 +1,7 @@
 
 class Action {
-    constructor(_dispatcher,id="call_status_action") {
-        this.dispatcher = _dispatcher;
+    constructor(dispatcher,id="call_status_action1") {
+        this.dispatcher = dispatcher;
         this.id = id;
     }
 
@@ -12,4 +12,5 @@ class Action {
         })
     }
 }
+
 export default Action
