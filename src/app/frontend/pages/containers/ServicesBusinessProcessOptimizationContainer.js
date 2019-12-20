@@ -62,7 +62,7 @@ class ServicesBusinessProcessOptimization extends Component {
                                         <li><i className="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Human Resources Cost Reduction</li>
                                         <li><i className="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Repeatable process and stable quality output</li>
                                         <li><i className="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Reduce dependencies on Human (proven to error)</li>
-                                        <li><i className="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Scale the operation without substantially increasing in salary budget</li>
+                                        <li><i className="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Scale the operation without substantially increasing in max_salary budget</li>
                                         <li><i className="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Collect and normalize data for Machine Learning Tasks</li>
                                     </ul>
                                 </div>

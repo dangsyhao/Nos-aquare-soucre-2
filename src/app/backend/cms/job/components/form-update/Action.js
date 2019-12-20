@@ -4,6 +4,7 @@ class Action extends LibraryForm.Form.Action {
     constructor(dispatcher, formId='form') {
         super(dispatcher, formId)
     }
+
     initActionHelpers() {
         this._actionHelpers = {
             'title':                    new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'title'),
@@ -12,6 +13,8 @@ class Action extends LibraryForm.Form.Action {
             'hour_per_week':            new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'hour_per_week'),
             'location':                 new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'location'),
             'experience_required':      new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'experience_required'),
+            'max_salary':                 new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'max_salary'),
+            'job_summary':      new LibraryForm.Common.Textbox.ActionHelper(this.dispatcher, this.formId, 'job_summary'),
         }
     }
 
@@ -26,18 +29,20 @@ class Action extends LibraryForm.Form.Action {
             async:        false,
             success:      function(result) {
                 if(result.status == 'ok') {
-                    _this.helper('title').dispatchChangeValue(result.data.record.title)
-                    _this.helper('is_fulltime').dispatchChangeValue(result.data.record.is_fulltime)
-                    _this.helper('is_parttime').dispatchChangeValue(result.data.record.is_parttime)
-                    _this.helper('hour_per_week').dispatchChangeValue(result.data.record.hour_per_week)
-                    _this.helper('location').dispatchChangeValue(result.data.record.location)
-                    _this.helper('experience_required').dispatchChangeValue(result.data.record.experience_required)
+                    _this.helper('title').dispatchChangeValue(result.data.record.title);
+                    _this.helper('is_fulltime').dispatchChangeValue(result.data.record.is_fulltime);
+                    _this.helper('is_parttime').dispatchChangeValue(result.data.record.is_parttime);
+                    _this.helper('hour_per_week').dispatchChangeValue(result.data.record.hour_per_week);
+                    _this.helper('location').dispatchChangeValue(result.data.record.location);
+                    _this.helper('experience_required').dispatchChangeValue(result.data.record.experience_required);
+                    _this.helper('max_salary').dispatchChangeValue(result.data.record.max_salary);
+                    _this.helper('job_summary').dispatchChangeValue(result.data.record.job_summary);
                     _this.dispatchFormLoadSuccess();
                 }
             },
             error:        function(data) {
-                _this.dispatchFormAddMessage("error", "Can't communicate to API")
-                _this.dispatchFormSubmitFail(values)
+                _this.dispatchFormAddMessage("error", "Can't communicate to API");
+                _this.dispatchFormSubmitFail(values);
             }
         })
     }

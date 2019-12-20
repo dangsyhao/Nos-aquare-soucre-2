@@ -7,24 +7,31 @@ import { translate } from 'react-i18next';
 import PageContainerView from 'frontend-components/page-container/View';
 import PageContainerAction from 'frontend-components/page-container/Action';
 import PageContainerStore from 'frontend-components/page-container/Store';
-
+//Job-component
+import JobViewComponent from '../components/aboutUs-theTeam-Job/View';
+import JobStoreComponent from '../components/aboutUs-theTeam-Job/Store';
+import JobActionComponent from '../components/aboutUs-theTeam-Job/Action';
 
 const _dispatcher = new Dispatcher();
 const _pageContainerStore = new PageContainerStore(_dispatcher, 'page-container')
 const _pageContainerAction = new PageContainerAction(_dispatcher, 'page-container')
-
+//Job-component
+const _jobComponentAction = new JobActionComponent(_dispatcher,'aboutUs-theTeam-job');
+const _jobComponentStore = new JobStoreComponent(_dispatcher,'aboutUs-theTeam-job');
 
 _pageContainerAction.setSelectedMenu('technology')
 class AboutUsTheTeamContainer extends Component {
     static getStores() {
         return [
             _pageContainerStore,
+            _jobComponentStore,
         ];
     }
 
     static calculateState(prevState) {
         return {
             pageContainer:                _pageContainerStore.getState(),
+            _jobComponentStore:           _jobComponentStore.getState(),
         }
     }
 
@@ -118,8 +125,6 @@ class AboutUsTheTeamContainer extends Component {
                         </div>
                     </div>
                 </section>
-
-
                 <section className="section" style={{ paddingBottom: 100 }}>
                     <div className="container">
                         <div className="justify-content-center row">
@@ -221,76 +226,11 @@ class AboutUsTheTeamContainer extends Component {
                         </div>
                     </div>
                 </section>
-
                 <section className="section" style={{ paddingBottom: 200 }}>
-                    <div className="container">
-                        <div className="text-center" style={{ marginBottom: 20 }}>
-                            <h2 className="title mb-4">Job</h2>
-                            <p className="text-muted">We are always in hiring-mode</p>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 mt-4 pt-2 col-md-6 col-lg-3">
-                                <div className="job-content p-4 border rounded position-relative overflow-hidden">
-                                    <div className="head pb-3 border-bottom">
-                                        <ul className="list-unstyled mb-0">
-                                            <li className="list-inline-item text-success">
-                                                Full Time
-                                            </li>
-                                        </ul>
-                                        <h5 style={{ marginTop: 10 }}>Full-stack Developer</h5>
-                                        <p className="mb-0 text-muted">HCM, Vietnam</p>
-                                    </div>
-                                    <ul className="job-facts pt-3 list-unstyled">
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> 1 Year Experience</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> 40-hour per week</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> Product Development</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-currency-usd text-success mr-1"></i> Up to $2000</li>
-                                    </ul>
-                                    <a className="btn btn-outline-primary btn-block" href="/page-job-detail">View</a>
-                                </div>
-                            </div>
-                            <div className="col-12 mt-4 pt-2 col-md-6 col-lg-3">
-                                <div className="job-content p-4 border rounded position-relative overflow-hidden">
-                                    <div className="head pb-3 border-bottom">
-                                        <ul className="list-unstyled mb-0">
-                                            <li className="list-inline-item text-success">
-                                                Full Time / Part Time
-                                            </li>
-                                        </ul>
-                                        <h5 style={{ marginTop: 10 }}>Back-end Developer</h5>
-                                        <p className="mb-0 text-muted">HCM, Vietnam</p>
-                                    </div>
-                                    <ul className="job-facts pt-3 list-unstyled">
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> Fresher</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> 35-hour per week</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> Coding, Testing</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-currency-usd text-success mr-1"></i> Up to $1500</li>
-                                    </ul>
-                                    <a className="btn btn-outline-primary btn-block" href="/page-job-detail">View</a>
-                                </div>
-                            </div>
-                            <div className="col-12 mt-4 pt-2 col-md-6 col-lg-3">
-                                <div className="job-content p-4 border rounded position-relative overflow-hidden">
-                                    <div className="head pb-3 border-bottom">
-                                        <ul className="list-unstyled mb-0">
-                                            <li className="list-inline-item text-success">
-                                                Part Time
-                                            </li>
-                                        </ul>
-                                        <h5 style={{ marginTop: 10 }}>Administration</h5>
-                                        <p className="mb-0 text-muted">HCM, Vietnam</p>
-                                    </div>
-                                    <ul className="job-facts pt-3 list-unstyled">
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> No Experience</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> 20-hour per week</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-check text-success mr-1"></i> Data Entry, Basic Task</li>
-                                        <li className="list-inline-item text-muted"><i className="mdi mdi-currency-usd text-success mr-1"></i> Up to $700</li>
-                                    </ul>
-                                    <a className="btn btn-outline-primary btn-block" href="/page-job-detail">View</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <JobViewComponent
+                    data={this.state._jobComponentStore}
+                    action={_jobComponentAction}
+                />
                 </section>
             </PageContainerView>
         )
